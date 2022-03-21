@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81538a78a843b2946803e1f6371c6a3c, type: 3}
+  m_Name: DataLevel
+  m_EditorClassIdentifier: 
+  infoLevels:
+  - HPbase: 100
+    ATKbase: 10
+    COINbase: 30
+  - HPbase: 100
+    ATKbase: 11
+    COINbase: 40
+  - HPbase: 100
+    ATKbase: 12
+    COINbase: 50
+  - HPbase: 100
+    ATKbase: 13
+    COINbase: 60
+  - HPbase: 130
+    ATKbase: 14
+    COINbase: 70
+  - HPbase: 120
+    ATKbase: 15
+    COINbase: 80
+  - HPbase: 120
+    ATKbase: 16
+    COINbase: 90
+  - HPbase: 120
+    ATKbase: 17
+    COINbase: 100
+  - HPbase: 120
+    ATKbase: 18
+    COINbase: 110
+  - HPbase: 200
+    ATKbase: 19
+    COINbase: 120
+  - HPbase: 200
+    ATKbase: 20
+    COINbase: 130
+  - HPbase: 200
+    ATKbase: 21
+    COINbase: 140
+  - HPbase: 200
+    ATKbase: 22
+    COINbase: 150
+  - HPbase: 200
+    ATKbase: 23
+    COINbase: 160
+  - HPbase: 200
+    ATKbase: 24
+    COINbase: 170
+  - HPbase: 200
+    ATKbase: 25
+    COINbase: 180
+  - HPbase: 200
+    ATKbase: 26
+    COINbase: 190
+  - HPbase: 200
+    ATKbase: 27
+    COINbase: 200
+  - HPbase: 200
+    ATKbase: 28
+    COINbase: 210
+  - HPbase: 200
+    ATKbase: 29
+    COINbase: 220
+  - HPbase: 200
+    ATKbase: 30
+    COINbase: 230
+  - HPbase: 200
+    ATKbase: 31
+    COINbase: 240
+  - HPbase: 200
+    ATKbase: 32
+    COINbase: 250
+  - HPbase: 200
+    ATKbase: 33
+    COINbase: 260
+  - HPbase: 200
+    ATKbase: 34
+    COINbase: 270
+  - HPbase: 200
+    ATKbase: 35
+    COINbase: 280
+  - HPbase: 200
+    ATKbase: 36
+    COINbase: 290
+  - HPbase: 200
+    ATKbase: 37
+    COINbase: 300
+  - HPbase: 200
+    ATKbase: 38
+    COINbase: 310
+  - HPbase: 200
+    ATKbase: 39
+    COINbase: 320
+  - HPbase: 200
+    ATKbase: 40
+    COINbase: 330
+  - HPbase: 200
+    ATKbase: 41
+    COINbase: 340
+  - HPbase: 200
+    ATKbase: 42
+    COINbase: 350
+  - HPbase: 200
+    ATKbase: 43
+    COINbase: 360
+  - HPbase: 200
+    ATKbase: 44
+    COINbase: 370
+  - HPbase: 200
+    ATKbase: 45
+    COINbase: 380
+  - HPbase: 200
+    ATKbase: 46
+    COINbase: 390
+  - HPbase: 200
+    ATKbase: 47
+    COINbase: 400
+  - HPbase: 200
+    ATKbase: 48
+    COINbase: 410
+  - HPbase: 200
+    ATKbase: 49
+    COINbase: 420
+  - HPbase: 200
+    ATKbase: 50
+    COINbase: 430
+  - HPbase: 200
+    ATKbase: 51
+    COINbase: 440
+  - HPbase: 200
+    ATKbase: 52
+    COINbase: 450
+  - HPbase: 200
+    ATKbase: 53
+    COINbase: 460
+  - HPbase: 200
+    ATKbase: 54
+    COINbase: 470
+  - HPbase: 200
+    ATKbase: 55
+    COINbase: 480
+  - HPbase: 200
+    ATKbase: 56
+    COINbase: 490
+  - HPbase: 200
+    ATKbase: 56
+    COINbase: 500
+  - HPbase: 200
+    ATKbase: 57
+    COINbase: 510
+  - HPbase: 200
+    ATKbase: 58
+    COINbase: 520

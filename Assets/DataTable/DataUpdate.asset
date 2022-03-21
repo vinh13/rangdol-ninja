@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c363ddd77f7954bb61c4ce041dc700, type: 3}
+  m_Name: DataUpdate
+  m_EditorClassIdentifier: 
+  infoLevels:
+  - HPbase: 100
+    ATKbase: 10
+    Price: 100
+  - HPbase: 110
+    ATKbase: 12
+    Price: 150
+  - HPbase: 120
+    ATKbase: 14
+    Price: 200
+  - HPbase: 130
+    ATKbase: 16
+    Price: 250
+  - HPbase: 140
+    ATKbase: 18
+    Price: 300
+  - HPbase: 150
+    ATKbase: 20
+    Price: 350
+  - HPbase: 160
+    ATKbase: 22
+    Price: 400
+  - HPbase: 170
+    ATKbase: 24
+    Price: 450
+  - HPbase: 180
+    ATKbase: 26
+    Price: 500
+  - HPbase: 190
+    ATKbase: 28
+    Price: 550
+  - HPbase: 200
+    ATKbase: 30
+    Price: 600
+  - HPbase: 210
+    ATKbase: 32
+    Price: 650
+  - HPbase: 220
+    ATKbase: 34
+    Price: 700
+  - HPbase: 230
+    ATKbase: 36
+    Price: 750
+  - HPbase: 240
+    ATKbase: 38
+    Price: 800
+  - HPbase: 250
+    ATKbase: 40
+    Price: 850
+  - HPbase: 260
+    ATKbase: 42
+    Price: 900
+  - HPbase: 270
+    ATKbase: 44
+    Price: 950
+  - HPbase: 280
+    ATKbase: 46
+    Price: 1000
+  - HPbase: 290
+    ATKbase: 48
+    Price: 1050
