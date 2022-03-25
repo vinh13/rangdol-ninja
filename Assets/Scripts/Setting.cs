@@ -8,8 +8,6 @@ public class Setting : MonoBehaviour
     public GameObject icon;
     [SerializeField] List<GameObject> L_btn;
     [SerializeField] List<Image> L_img;
-    [SerializeField] List<GameObject> L_iconMusic;
-    int indexMusic;
     [SerializeField] List<GameObject> L_iconSound;
     int indexSound;
     [SerializeField] List<GameObject> L_iconVibrate;
@@ -20,20 +18,24 @@ public class Setting : MonoBehaviour
     int fadeImg;
     private void Awake()
     {
-        fadeImg = 1;
-        rota = 180;
-        pos = 100;
-        setTouch = false;
-        indexMusic = PlayerPrefs.GetInt(keysave.Music, 0);
         indexSound = PlayerPrefs.GetInt(keysave.Sound, 0);
         indexVibrate = PlayerPrefs.GetInt(keysave.Vibrate, 0);
     }
+    private void OnEnable()
+    {
+        CanvasManager.ac_Setting += click_off;
+        fadeImg = 1;
+        rota = 180;
+        pos = 110;
+        setTouch = false;
+    }
+    private void OnDisable()
+    {
+        CanvasManager.ac_Setting -= click_off;
+    }
     private void Start()
     {
-        for (int i = 0; i < L_iconMusic.Count; i++)
-        {
-            L_iconMusic[i].SetActive(i == indexMusic);
-        }
+       
         PlayerPrefs.SetInt(keysave.Sound, indexSound);
         for (int i = 0; i < L_iconSound.Count; i++)
         {
@@ -44,17 +46,7 @@ public class Setting : MonoBehaviour
             L_iconVibrate[i].SetActive(i == indexVibrate);
         }
     }
-    public void setMusic()
-    {
-        indexMusic = (indexMusic == 1) ?0:1;
-        PlayerPrefs.SetInt(keysave.Music, indexMusic);
-        for (int i = 0; i < L_iconMusic.Count; i++)
-        {
-            L_iconMusic[i].SetActive(i == indexMusic);
-
-
-        }
-    }
+    
     public void setSound()
     {
         indexSound = (indexSound == 1) ? 0 : 1;
@@ -62,8 +54,6 @@ public class Setting : MonoBehaviour
         for (int i = 0; i < L_iconSound.Count; i++)
         {
             L_iconSound[i].SetActive(i == indexSound);
-
-
         }
     }
     public void setVibrate()
@@ -76,6 +66,23 @@ public class Setting : MonoBehaviour
 
 
         }
+    }
+    public void click_off()
+    {
+        for (int i = 0; i < L_btn.Count; i++)
+        {
+            L_btn[i].transform.localPosition= Vector3.zero;
+        }
+        for (int i = 0; i < L_img.Count; i++)
+        {
+
+            L_img[i].DOFade(0, 0);
+        }
+        icon.transform.localEulerAngles = Vector3.zero;
+
+        fadeImg = 1;
+        rota = 180;
+        pos = 110;
     }
     public void click()
     {
@@ -91,7 +98,7 @@ public class Setting : MonoBehaviour
                 L_img[i].DOFade(fadeImg, 0.5f);
             }
             fadeImg = (fadeImg == 1) ? 0 : 1;
-            pos = (pos == 100) ? 0 : 100;
+            pos = (pos == 110) ? 0 : 110;
             setTouch = true;
             icon.transform.DOLocalRotate(Vector3.forward * (rota), 0.5f).OnComplete(() => {
                 setTouch = false;

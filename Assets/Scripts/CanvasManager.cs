@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class CanvasManager : MonoBehaviour
 {
     public static CanvasManager Instance;
+    public static Action ac_Setting;
     int Coin;
     public Text txtCoin;
     int indexLevel;
@@ -32,6 +34,7 @@ public class CanvasManager : MonoBehaviour
     public Text txtLevelAtkUpgrape;
     int levelAtk;
     public GameObject removeAdsBtn;
+    public GameObject BoxStart;
     private void Awake()
     {
         if (!Instance)
@@ -85,6 +88,8 @@ public class CanvasManager : MonoBehaviour
     {
         Coin += val;
         txtCoin.text = Coin.ToString();
+        checkUpgapeHP();
+        checkUpgapeATK();
         PlayerPrefs.SetInt(keysave.Coin, Coin);
     }
     private void getLevel(int val)
@@ -95,6 +100,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void onGetCoinAds()
     {
+        ac_Setting.Invoke();
         adsManager.Instance.showReward(actiongetCoin);
     }
     void actiongetCoin()
@@ -103,16 +109,23 @@ public class CanvasManager : MonoBehaviour
     }
     public void playGame()
     {
+        ac_Setting.Invoke();
         MenuMain.SetActive(false);
         GamePlayUI.SetActive(true);
+        BoxStart.SetActive(true);
+
     }
     public void onShop()
     {
+        ac_Setting.Invoke();
         ShopUI.SetActive(true);
     }
     public void onPause()
     {
-        Time.timeScale = (Time.timeScale==1)?0:1;
+        MenuMain.SetActive(true);
+        ActionBase.replayLevelAction();
+        GamePlayUI.gameObject.SetActive(false);
+        BoxStart.gameObject.SetActive(false);
     }
     private void checkUpgapeHP()
     {
@@ -143,6 +156,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void BuyCoinUpgrapeHP()
     {
+        ac_Setting.Invoke();
         int tempCoi = dataUpgrape.infoLevels[levelHp + 1].Price;
         if (Coin >= tempCoi)
         {
@@ -158,6 +172,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void BuyAdsUpgrapeHP()
     {
+        ac_Setting.Invoke();
         adsManager.Instance.showReward(actionUpHp);
      
     }
@@ -198,6 +213,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void BuyCoinUpgrapeAtk()
     {
+        ac_Setting.Invoke();
         int tempCoi = dataUpgrape.infoLevels[levelAtk + 1].Price;
         if (Coin >= tempCoi)
         {
@@ -212,6 +228,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void BuyAdsUpgrapeAtk()
     {
+        ac_Setting.Invoke();
         adsManager.Instance.showReward(actioUpAtk);
     }
     void actioUpAtk()
@@ -225,6 +242,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void btnremoveads()
     {
+        ac_Setting.Invoke();
         Purchaser.Instance.PruductID(Purchaser.removeAds, actionRemoveAds);
     }
     void actionRemoveAds()

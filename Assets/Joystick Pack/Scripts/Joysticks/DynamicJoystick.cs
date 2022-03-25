@@ -15,7 +15,15 @@ public class DynamicJoystick : Joystick
         base.Start();
         background.gameObject.SetActive(false);
     }
-
+    private void OnEnable()
+    {
+        background.gameObject.SetActive(false);
+        base.dis();
+    }
+    private void OnDisable()
+    {
+        base.dis();
+    }
     public override void OnPointerDown(PointerEventData eventData)
     {
         background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);

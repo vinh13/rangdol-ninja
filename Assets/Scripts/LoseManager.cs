@@ -6,15 +6,21 @@ using DG.Tweening;
 
 public class LoseManager : MonoBehaviour
 {
+    [SerializeField] GameObject txtLevel;
     public GameObject LoseBase;
     public GameObject MainMenu;
     public GameObject GamePlayUI;
+    public GameObject BoxStart;
     public Image countDown;
     public Text txtTimecountDown;
     public GameObject btnRevive;
+    [SerializeField] GameObject btnNothanks;
     private void OnEnable()
     {
         GamePlayUI.SetActive(false);
+        BoxStart.SetActive(false);
+        txtLevel.SetActive(false);
+        btnNothanks.SetActive(false);
         StartCoroutine("timedelaybase");
     }
   
@@ -27,6 +33,7 @@ public class LoseManager : MonoBehaviour
         countDown.DOKill();
         countDown.fillAmount = 1;
         StartCoroutine("timeCountDown");
+        Invoke("timeothanks", 2);
         countDown.DOFillAmount(0, 10).OnComplete(() =>
         {
             // btnRevive.SetActive(false);
@@ -35,6 +42,10 @@ public class LoseManager : MonoBehaviour
             gameObject.SetActive(false);
         });
         LoseBase.SetActive(true);
+    }
+    private void timeothanks()
+    {
+        btnNothanks.SetActive(true);
     }
     IEnumerator timeCountDown()
     {
@@ -59,6 +70,7 @@ public class LoseManager : MonoBehaviour
     {
         ActionBase.ReviveAction();
         GamePlayUI.SetActive(true);
+        BoxStart.SetActive(true);
         gameObject.SetActive(false);
     }
     public void nothank()
@@ -70,6 +82,7 @@ public class LoseManager : MonoBehaviour
     }
     private void OnDisable()
     {
+        txtLevel.SetActive(true);
         countDown.DOKill();
     }
 }

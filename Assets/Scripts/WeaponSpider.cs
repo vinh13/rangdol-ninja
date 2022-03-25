@@ -10,8 +10,7 @@ public class WeaponSpider : WeaponBase
     bool setShot;
     private void Start()
     {
-        setShot = true;
-       
+        setShot = false;
     }
 
     IEnumerator timedelayGun()
@@ -49,5 +48,12 @@ public class WeaponSpider : WeaponBase
         setShot = true;
         StartCoroutine("timedelayGun");
     }
-   
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == keysave.play)
+        {
+            setShot = true;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+    }
 }
