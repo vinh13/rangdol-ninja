@@ -25,5 +25,8 @@ public class keysave
     public static string Sound = "Sound";
     public static string Vibrate = "vibrate";
     public static string play = "Play";
+    public static string tagWeapon = "Weapon";
+    public static string tagBarrel = "Barrel";
+   
    
 }
