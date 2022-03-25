@@ -143,7 +143,7 @@ public class CopyAnim : MonoBehaviour
     {
         if (alive)
         {
-            if (collision.gameObject.tag == "Weapon")
+            if (collision.gameObject.tag ==keysave.tagWeapon)
             {
                 a.Invoke(collision.gameObject.GetComponent<WeaponBase>().Damp);
                 if (collision.gameObject.GetComponent<bullet>() != null)
@@ -159,6 +159,26 @@ public class CopyAnim : MonoBehaviour
             }
         }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (alive)
+        {
+            if (other.gameObject.tag == keysave.tagBarrel)
+            {
+                a.Invoke(other.gameObject.GetComponent<WeaponBase>().Damp);
+                if (other.gameObject.GetComponent<bullet>() != null)
+                {
+                    other.gameObject.SetActive(false);
+                }
+                breakSkelet();
+                if (Weapon != null)
+                {
+                    Weapon.layer = 11;
+                }
+
+            }
+        }
     }
 
 
