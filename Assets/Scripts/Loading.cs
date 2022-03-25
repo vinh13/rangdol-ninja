@@ -11,6 +11,7 @@ public class Loading : MonoBehaviour
 
 	float tece;
 	AsyncOperation async;
+	public int levelIndex;
     private void Awake()
     {
 		tece = 0;
@@ -31,8 +32,8 @@ public class Loading : MonoBehaviour
 			
 		}
 		Application.targetFrameRate = 60;
-		
-    }
+		PlayerPrefs.SetInt(keysave.Level, levelIndex);
+	}
     private void Start()
 	{
 		StartCoroutine(LoadScene());

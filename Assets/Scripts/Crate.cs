@@ -28,7 +28,7 @@ public class Crate : MonoBehaviour
     }
     IEnumerator timeDie()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }
 }
