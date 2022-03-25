@@ -5,23 +5,28 @@ using UnityEngine.UI;
 
 public class WinManager : MonoBehaviour
 {
+    [SerializeField] GameObject txtLevel;
     public Text txtCoin;
     public GameObject MainMenu;
     public GameObject GamePlayUI;
+    public GameObject BoxStart;
     public GameObject WinBase;
     public List<GameObject> Contine_L;
     int index_x5;
     int coin;
+
     private void Awake()
     {
         index_x5 = 0;
     }
     private void OnEnable()
     {
+        txtLevel.SetActive(false);
         coin = GameManager.Instance.getcoininWin(PlayerPrefs.GetInt(keysave.Level, 0));
         StartCoroutine("timedelaybase");
         txtCoin.text = coin.ToString();
         GamePlayUI.SetActive(false);
+        BoxStart.SetActive(false);
         ActionBase.setLevelAction();
     }
     IEnumerator timedelaybase()
@@ -51,5 +56,9 @@ public class WinManager : MonoBehaviour
         MainMenu.SetActive(true);
         ActionBase.nextLevelAction();
         gameObject.SetActive(false);
+    }
+    private void OnDisable()
+    {
+        txtLevel.SetActive(true);
     }
 }

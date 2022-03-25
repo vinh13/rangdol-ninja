@@ -24,6 +24,8 @@ public static class ActionBase
     public static Action getMaterialPlayer;
     public static Action getWeaponPlayer;
     public static Action moveCam;
- 
+    public static Action<GameObject> GetEnemy;
+    public static Action<GameObject> removeEnemy;
+
 
 }

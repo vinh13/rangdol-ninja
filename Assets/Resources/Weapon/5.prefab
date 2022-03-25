@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &1457316006790742562
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9079241924378229113}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.040116902, y: 1.2204399, z: 0.18686831}
-  m_Center: {x: 0.00000010862205, y: 0.61019737, z: 0.0053473166}
 --- !u!1 &8363834161344657066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,7 +2333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8488064547981491665}
   m_LocalRotation: {x: 0.018221915, y: 0.046663158, z: 0.10591901, w: 0.99311215}
-  m_LocalPosition: {x: -0.03799994, y: 0.32300013, z: 0.0019999999}
+  m_LocalPosition: {x: 0.108, y: 0.134, z: -0.017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9079241924377994585}
@@ -2382,7 +2369,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.03799994, y: 0.32300013, z: 0.0019999999}
+  m_ConnectedAnchor: {x: -5.2656374, y: 2.5222893, z: 0.06413252}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -7026,6 +7013,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!65 &1457316006790742562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079241924378229113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.040116902, y: 1.2204399, z: 0.18686831}
+  m_Center: {x: 0.00000010862205, y: 0.61019737, z: 0.0053473166}
 --- !u!1 &9157473646054881155
 GameObject:
   m_ObjectHideFlags: 0

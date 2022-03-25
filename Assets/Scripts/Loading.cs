@@ -7,27 +7,30 @@ using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
-	
-	public Image LoadingImage;
 
+
+	float tece;
 	AsyncOperation async;
     private void Awake()
     {
-        if (PlayerPrefs.GetInt("FirstGame", 0) == 0)
+		tece = 0;
+
+		if (PlayerPrefs.GetInt("FirstGame", 0) == 0)
         {
+			PlayerPrefs.GetInt(keysave.Coin, 0);
 			PlayerPrefs.GetInt("Skin_0", 0);
 			PlayerPrefs.SetInt("Skin_0", 1);
 			PlayerPrefs.GetInt("Weapon_0", 0);
 			PlayerPrefs.SetInt("Weapon_0", 1);
 			PlayerPrefs.SetInt("FirstGame", 1);
-			PlayerPrefs.GetInt(keysave.Music, 0);
-			PlayerPrefs.SetInt(keysave.Music, 1);
+		
 			PlayerPrefs.GetInt(keysave.Sound, 0);
 			PlayerPrefs.SetInt(keysave.Sound, 1);
 			PlayerPrefs.GetInt(keysave.Vibrate, 0);
 			PlayerPrefs.SetInt(keysave.Vibrate, 1);
 			
 		}
+		Application.targetFrameRate = 60;
 		
     }
     private void Start()
@@ -40,10 +43,9 @@ public class Loading : MonoBehaviour
 		async.allowSceneActivation = false;
 		float percent = 0;
 
-		while (LoadingImage.fillAmount < 1.0)
+		while (tece < 1.0)
 		{
-			LoadingImage.fillAmount += 1.0f / 2 * Time.deltaTime;
-			percent = Mathf.Floor(LoadingImage.fillAmount * 100);
+			tece += 1.0f / 1 * Time.deltaTime;
 
 
 			yield return null;

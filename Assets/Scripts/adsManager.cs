@@ -53,16 +53,19 @@ public class adsManager : MonoBehaviour
     }
     public void showReward(Action val)
     {
-        if (PlayerPrefs.GetInt(keysave.removeads, 0) == 0)
+#if UNITY_EDITOR
+        a = val;
+        a.Invoke();
+#else
+        bool available = IronSource.Agent.isRewardedVideoAvailable();
+        if (available)
         {
-            bool available = IronSource.Agent.isRewardedVideoAvailable();
-            if (available)
-            {
-                a = val;
-                IronSource.Agent.showRewardedVideo();
+            a = val;
+            IronSource.Agent.showRewardedVideo();
 
-            }
         }
+#endif
+
 
     }
     void RewardedVideoAdRewardedEvent(IronSourcePlacement placement)

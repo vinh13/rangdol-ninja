@@ -21,32 +21,33 @@ public class Enemy : CharacterBase
     [SerializeField] List<LineRenderer> L_Laser;
     public SkinnedMeshRenderer skinMesh;
     public Rate rate;
-     GameObject Gun;
+    GameObject Gun;
     bool setGun;
     RaycastHit hit;
-     LineRenderer laserLine;
+    LineRenderer laserLine;
     float timeGun;
     [SerializeField] bool SetGun;
-  
-  
+
+
     private void Start()
     {
+        ActionBase.GetEnemy(gameObject);
         int val_rate = 1;
         if ((int)rate == 1)
         {
             val_rate = 4;
         }
-       
-        HP = infoLvl.HPbase*val_rate;
+
+        HP = infoLvl.HPbase * val_rate;
         HPBase = HP;
         ActionBase.getCountInGamePlay();
         for (int i = 0; i < CopyAnim.Count; i++)
         {
             CopyAnim[i].checkSkelet(Die, StopGun);
         }
-       
+
         //       Sword
-        for(int i = 0; i < L_Weapon.Count; i++)
+        for (int i = 0; i < L_Weapon.Count; i++)
         {
             L_Weapon[i].SetActive(i == ((int)type));
         }
@@ -55,22 +56,14 @@ public class Enemy : CharacterBase
             Gun = L_Weapon[((int)type)];
             laserLine = L_Laser[((int)type)];
         }
-        if (Gun != null)
-        {
-            timeGun = keysave.timeGun;
-            setGun = true;
-        }
-        if (Gun != null)
-        {
+        setStartGun = false;
 
-            StartCoroutine("timedelayGun");
-        }
+
 
     }
-    // Update is called once per frame
     void Update()
     {
-         shotGun();
+        shotGun();
         transform.position = new Vector3(Hip.transform.position.x, Hip.transform.position.y - 0.9f, Hip.transform.position.z);
     }
     private void FixedUpdate()
@@ -94,7 +87,7 @@ public class Enemy : CharacterBase
         {
             laserLine.gameObject.SetActive(false);
         }
-       
+
         StopCoroutine("timedelayGun");
     }
     private void shotGun()
@@ -103,12 +96,12 @@ public class Enemy : CharacterBase
         {
             if (Physics.Raycast(Gun.transform.position, Gun.transform.forward, out hit))
             {
-              
-                laserLine.SetPosition(0,new Vector3(Gun.transform.position.x, Gun.transform.position.y,0));
+
+                laserLine.SetPosition(0, new Vector3(Gun.transform.position.x, Gun.transform.position.y, 0));
                 if (hit.collider)
                 {
                     laserLine.SetPosition(1, new Vector3(hit.point.x, hit.point.y, 0));
-                   
+
                 }
             }
         }
@@ -118,7 +111,6 @@ public class Enemy : CharacterBase
     {
         if (alive)
         {
-            
             HP -= infoLvl.ATKbase * damp;
             setUIBlood();
             if (HP <= 0)
@@ -138,6 +130,7 @@ public class Enemy : CharacterBase
                     laserLine.gameObject.SetActive(false);
                 }
                 StopCoroutine("timedelayGun");
+                ActionBase.removeEnemy(gameObject);
                 gameObject.SetActive(false);
             }
         }
@@ -149,6 +142,35 @@ public class Enemy : CharacterBase
         yield return new WaitForSeconds(timeGun);
         BulletManager.Instance.GunShot(Gun);
         StartCoroutine("timedelayGun");
+    }
+    bool setStartGun;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!setStartGun)
+        {
+          
+            if (other.gameObject.tag == keysave.play)
+            {
+                if (Gun != null)
+                {
+                    setStartGun = true;
+                    timeGun = keysave.timeGun;
+                    setGun = true;
+                }
+                if (Gun != null)
+                {
+
+                    StartCoroutine("timedelayGun");
+                }
+                else
+                {
+                    setStartGun = true;
+                }
+            }
+
+        }
+
     }
 
 }

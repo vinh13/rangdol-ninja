@@ -9,6 +9,7 @@ TagManager:
   - Cut
   - Die
   - Ground
+  - Play
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Ground
   - Saw
   - WeaponEne
-  - 
-  - 
+  - Balence
+  - Play
   - 
   - 
   - 

@@ -33,6 +33,9 @@ public class ShopManager : MonoBehaviour
     public GameObject PriceWeaponVideo;
     public GameObject PriceWeaponCoin;
     public Text txtCoinWeapon;
+    [SerializeField] GameObject select;
+    [SerializeField] GameObject Char;
+    [SerializeField] GameObject Weapon;
 
     private void Awake()
     {
@@ -41,6 +44,14 @@ public class ShopManager : MonoBehaviour
         indexSkin = PlayerPrefs.GetInt(keysave.indexMaterial, 0);
         indexWeapon = PlayerPrefs.GetInt(keysave.indexWeapon, 0);
         reviewSkin(indexSkin,Price.Video);
+        select.transform.parent = itemSkin[indexSkin].transform;
+        select.transform.localPosition = Vector3.zero;
+        Char.SetActive(true);
+        Weapon.SetActive(false);
+        for (int i = 0; i < L_Weapon.Count; i++)
+        {
+            L_Weapon[i].SetActive(indexWeapon == i);
+        }
     }
 
     private void OnEnable()
@@ -54,6 +65,7 @@ public class ShopManager : MonoBehaviour
         {
             itemSkin[i].check(reviewSkin, i );
         }
+       
     }
     private void setItemWeapon()
     {
@@ -96,6 +108,8 @@ public class ShopManager : MonoBehaviour
             btnBuyWeapon.SetActive(false);
             PlayerPrefs.SetInt(keysave.indexMaterial, indexSkin);
             ActionBase.getMaterialPlayer();
+            select.transform.parent = itemSkin[indexSkin].transform;
+            select.transform.localPosition = Vector3.zero;
         }
        
 
@@ -116,6 +130,8 @@ public class ShopManager : MonoBehaviour
                 btnBuySkin.SetActive(false);
                 ActionBase.getMaterialPlayer();
                 itemSkin[indexSkin].Lock.SetActive(false);
+                select.transform.parent = itemSkin[indexSkin].transform;
+                select.transform.localPosition = Vector3.zero;
             }
            
         }
@@ -128,6 +144,8 @@ public class ShopManager : MonoBehaviour
         ActionBase.getMaterialPlayer();
         btnBuySkin.SetActive(false);
         itemSkin[indexSkin].Lock.SetActive(false);
+        select.transform.parent = itemSkin[indexSkin].transform;
+        select.transform.localPosition = Vector3.zero;
     }
     private void reviewWeapon(int val, Price price)
     {
@@ -159,6 +177,8 @@ public class ShopManager : MonoBehaviour
             btnBuyWeapon.SetActive(false);
             PlayerPrefs.SetInt(keysave.indexWeapon, indexWeapon);
             ActionBase.getWeaponPlayer();
+            select.transform.parent = itemWeapon[indexWeapon].transform;
+            select.transform.localPosition = Vector3.zero;
         }
            
     }
@@ -178,6 +198,8 @@ public class ShopManager : MonoBehaviour
                 btnBuyWeapon.SetActive(false);
                 ActionBase.getWeaponPlayer();
                 itemWeapon[indexWeapon].Lock.SetActive(false);
+                select.transform.parent = itemWeapon[indexWeapon].transform;
+                select.transform.localPosition = Vector3.zero;
             }
                 
         }
@@ -190,9 +212,13 @@ public class ShopManager : MonoBehaviour
         btnBuyWeapon.SetActive(false);
         ActionBase.getWeaponPlayer();
         itemWeapon[indexWeapon].Lock.SetActive(false);
+        select.transform.parent = itemWeapon[indexWeapon].transform;
+        select.transform.localPosition = Vector3.zero;
     }
     public void choiceSkin()
     {
+        Char.SetActive(true);
+        Weapon.SetActive(false);
         btnChoice.transform.parent = btnSkin.transform;
         btnChoice.transform.localPosition = Vector3.zero;
         btnChoice.transform.SetSiblingIndex(0);
@@ -210,10 +236,14 @@ public class ShopManager : MonoBehaviour
             btnTableSkin.SetActive(true);
     
         btnTableWeapon.SetActive(false);
-       
+        select.transform.parent = itemSkin[indexSkin].transform;
+        select.transform.localPosition = Vector3.zero;
+
     }
     public void choiceWeapon()
     {
+        Char.SetActive(false);
+        Weapon.SetActive(true);
         btnChoice.transform.parent = btnWeapon.transform;
         btnChoice.transform.localPosition = Vector3.zero;
         btnChoice.transform.SetSiblingIndex(0);
@@ -231,7 +261,9 @@ public class ShopManager : MonoBehaviour
         btnTableSkin.SetActive(false);
      
         btnTableWeapon.SetActive(true);
-       
+        select.transform.parent = itemWeapon[indexWeapon].transform;
+        select.transform.localPosition = Vector3.zero;
+
     }
     public void close()
     {

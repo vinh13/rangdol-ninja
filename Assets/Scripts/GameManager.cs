@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class GameManager : MonoBehaviour
     GameObject OldLevel;
     GameObject NewLevel;
     [SerializeField] DataTable data;
+    public List<GameObject> L_Enemy;
+    public List<RectTransform> L_Rada;
+    [SerializeField]  RectTransform CanvasRect;
     private void Awake()
     {
         if (!Instance)
@@ -24,6 +28,8 @@ public class GameManager : MonoBehaviour
         ActionBase.getChildAction += getChild;
         ActionBase.nextLevelAction += nextLevel;
         ActionBase.replayLevelAction += ReloadLevel;
+        ActionBase.GetEnemy += getEnrmy;
+        ActionBase.removeEnemy += removeEnrmy;
 
         
     }
@@ -32,8 +38,18 @@ public class GameManager : MonoBehaviour
         ActionBase.getChildAction -= getChild;
         ActionBase.nextLevelAction -= nextLevel;
         ActionBase.replayLevelAction -= ReloadLevel;
+        ActionBase.removeEnemy -= removeEnrmy;
 
 
+    }
+    void getEnrmy(GameObject val)
+    {
+        L_Enemy.Add(val);
+    }
+    void removeEnrmy(GameObject val)
+    {
+        L_Rada[L_Enemy.Count-1].gameObject.SetActive(false);
+        L_Enemy.Remove(val);
     }
     private void Start()
     {
@@ -52,6 +68,50 @@ public class GameManager : MonoBehaviour
       
         SpawnLevel = Resources.Load(NameLevel) as GameObject;
         NewLevel = Instantiate(SpawnLevel);
+    }
+    private void Update()
+    {
+       for(int i=0;i< L_Enemy.Count; i++)
+        {
+            rada(L_Enemy[i].transform, i);
+        }
+    }
+    void rada( Transform val,int a)
+    {
+        Vector3 screenPoint = Camera.main.WorldToViewportPoint(val.transform.position);
+        bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
+        if (!onScreen)
+        {
+            L_Rada[a].gameObject.SetActive(true);
+            Vector2 WorldObject_ScreenPosition = new Vector2(
+            ((screenPoint.x * CanvasRect.sizeDelta.x) - (CanvasRect.sizeDelta.x * 0.45f)),
+            ((screenPoint.y * CanvasRect.sizeDelta.y) - (CanvasRect.sizeDelta.y * 0.45f)));
+            Vector2 tempWorldObject_ScreenPosition = WorldObject_ScreenPosition;
+            if (tempWorldObject_ScreenPosition.x >= (CanvasRect.sizeDelta.x *0.45f))
+            {
+                tempWorldObject_ScreenPosition.x = CanvasRect.sizeDelta.x *0.45f;
+            }
+            else if (tempWorldObject_ScreenPosition.x <= -(CanvasRect.sizeDelta.x *0.45f))
+            {
+                tempWorldObject_ScreenPosition.x = -CanvasRect.sizeDelta.x *0.45f;
+            }
+            if (tempWorldObject_ScreenPosition.y >= (CanvasRect.sizeDelta.y * 0.3f))
+            {
+                tempWorldObject_ScreenPosition.y = CanvasRect.sizeDelta.y * 0.3f;
+            }
+            else if (tempWorldObject_ScreenPosition.y <= -(CanvasRect.sizeDelta.y * 0.45f))
+            {
+                tempWorldObject_ScreenPosition.y = -CanvasRect.sizeDelta.y * 0.45f;
+            }
+            L_Rada[a].anchoredPosition = tempWorldObject_ScreenPosition;
+            Vector2 tempAr = (tempWorldObject_ScreenPosition - WorldObject_ScreenPosition).normalized;
+            L_Rada[a].up = tempAr;
+        }
+        else
+        {
+           
+            L_Rada[a].gameObject.SetActive(false);
+        }
     }
     public int getcoininWin(int level)
     {
@@ -77,14 +137,21 @@ public class GameManager : MonoBehaviour
     }
     private void ReloadLevel()
     {
+        L_Enemy.Clear();
+       
         OldLevel = NewLevel;
         OldLevel.SetActive(false);
         Destroy(TempParent);
         Destroy(OldLevel);
         StartCoroutine(loadlevel());
+        for (int i = 0; i < L_Rada.Count; i++)
+        {
+            L_Rada[i].gameObject.SetActive(false);
+        }
     }
     private void nextLevel()
     {
+        L_Enemy.Clear();
         OldLevel = NewLevel;
         ActionBase.getLevelAction(0);
       levelnow = PlayerPrefs.GetInt(keysave.Level, 0);
@@ -92,6 +159,10 @@ public class GameManager : MonoBehaviour
         Destroy(TempParent);
         Destroy(OldLevel);
         StartCoroutine(loadlevel());
+        for (int i = 0; i < L_Rada.Count; i++)
+        {
+            L_Rada[i].gameObject.SetActive(false);
+        }
 
 
     }

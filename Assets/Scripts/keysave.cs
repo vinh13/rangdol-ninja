@@ -24,5 +24,6 @@ public class keysave
     public static string Music = "Music";
     public static string Sound = "Sound";
     public static string Vibrate = "vibrate";
+    public static string play = "Play";
    
 }
