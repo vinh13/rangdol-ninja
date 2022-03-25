@@ -46,6 +46,7 @@ public class ShopManager : MonoBehaviour
         reviewSkin(indexSkin,Price.Video);
         select.transform.parent = itemSkin[indexSkin].transform;
         select.transform.localPosition = Vector3.zero;
+        select.transform.SetSiblingIndex(0);
         Char.SetActive(true);
         Weapon.SetActive(false);
         for (int i = 0; i < L_Weapon.Count; i++)
@@ -110,6 +111,7 @@ public class ShopManager : MonoBehaviour
             ActionBase.getMaterialPlayer();
             select.transform.parent = itemSkin[indexSkin].transform;
             select.transform.localPosition = Vector3.zero;
+            select.transform.SetSiblingIndex(0);
         }
        
 
@@ -132,6 +134,7 @@ public class ShopManager : MonoBehaviour
                 itemSkin[indexSkin].Lock.SetActive(false);
                 select.transform.parent = itemSkin[indexSkin].transform;
                 select.transform.localPosition = Vector3.zero;
+                select.transform.SetSiblingIndex(0);
             }
            
         }
@@ -146,6 +149,7 @@ public class ShopManager : MonoBehaviour
         itemSkin[indexSkin].Lock.SetActive(false);
         select.transform.parent = itemSkin[indexSkin].transform;
         select.transform.localPosition = Vector3.zero;
+        select.transform.SetSiblingIndex(0);
     }
     private void reviewWeapon(int val, Price price)
     {
@@ -179,6 +183,7 @@ public class ShopManager : MonoBehaviour
             ActionBase.getWeaponPlayer();
             select.transform.parent = itemWeapon[indexWeapon].transform;
             select.transform.localPosition = Vector3.zero;
+            select.transform.SetSiblingIndex(0);
         }
            
     }
@@ -200,6 +205,7 @@ public class ShopManager : MonoBehaviour
                 itemWeapon[indexWeapon].Lock.SetActive(false);
                 select.transform.parent = itemWeapon[indexWeapon].transform;
                 select.transform.localPosition = Vector3.zero;
+                select.transform.SetSiblingIndex(0);
             }
                 
         }
@@ -214,6 +220,7 @@ public class ShopManager : MonoBehaviour
         itemWeapon[indexWeapon].Lock.SetActive(false);
         select.transform.parent = itemWeapon[indexWeapon].transform;
         select.transform.localPosition = Vector3.zero;
+        select.transform.SetSiblingIndex(0);
     }
     public void choiceSkin()
     {
@@ -238,6 +245,7 @@ public class ShopManager : MonoBehaviour
         btnTableWeapon.SetActive(false);
         select.transform.parent = itemSkin[indexSkin].transform;
         select.transform.localPosition = Vector3.zero;
+        select.transform.SetSiblingIndex(0);
 
     }
     public void choiceWeapon()
@@ -263,6 +271,7 @@ public class ShopManager : MonoBehaviour
         btnTableWeapon.SetActive(true);
         select.transform.parent = itemWeapon[indexWeapon].transform;
         select.transform.localPosition = Vector3.zero;
+        select.transform.SetSiblingIndex(0);
 
     }
     public void close()

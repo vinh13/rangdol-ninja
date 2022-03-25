@@ -24,7 +24,6 @@ public class Crate : MonoBehaviour
                 StartCoroutine("timeDie");
             }
         }
-      
     }
     IEnumerator timeDie()
     {
