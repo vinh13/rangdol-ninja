@@ -27,6 +27,7 @@ public class keysave
     public static string play = "Play";
     public static string tagWeapon = "Weapon";
     public static string tagBarrel = "Barrel";
+    public static string wall = "Wall";
    
    
 }

@@ -259,6 +259,7 @@ public class PlayerController : CharacterBase
         ; yield return new WaitForSeconds(2);
         setRevive = false;
     }
+   
 
 
 }

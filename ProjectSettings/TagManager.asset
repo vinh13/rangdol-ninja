@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - Play
   - Barrel
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - WeaponEne
   - Balence
   - Play
-  - 
+  - FxWall
   - 
   - 
   - 

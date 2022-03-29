@@ -79,8 +79,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.6
-      minScalar: 0.8
+      scalar: 1
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve: []
@@ -2287,7 +2287,8 @@ GameObject:
   - component: {fileID: 934821873365379414}
   - component: {fileID: 1371094052596505829}
   - component: {fileID: 437593423985133365}
-  m_Layer: 10
+  - component: {fileID: 691690613837835511}
+  m_Layer: 17
   m_Name: Chainsaw
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -2338,7 +2339,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -5.1588373, y: 2.5450892, z: 0.06893254}
+  m_ConnectedAnchor: {x: -4.802438, y: 2.4922893, z: 0.07013177}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2448,6 +2449,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 1
+--- !u!114 &691690613837835511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934821878868306896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411a58836b37bef45bf6565e89630931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &934821878868306906
 GameObject:
   m_ObjectHideFlags: 0
