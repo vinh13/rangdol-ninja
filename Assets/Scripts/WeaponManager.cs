@@ -4,16 +4,19 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     [SerializeField] GameObject Blood;
+    public AudioClip sound;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            AudioManager.Instance.playSound(sound);
             StopCoroutine("timeBlood");
             StartCoroutine("timeBlood");
           
         }
         else if (collision.gameObject.tag == "Cut")
         {
+            AudioManager.Instance.playSound(sound);
             StopCoroutine("timeBlood");
             StartCoroutine("timeBlood");
             StopCoroutine("timeScale");

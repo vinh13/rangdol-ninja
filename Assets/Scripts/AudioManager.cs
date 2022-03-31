@@ -15,6 +15,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip spiderShoot;
     public AudioClip Ui;
     public AudioClip Win;
+    public AudioClip thunggo;
+    public AudioClip upgrade;
+    public AudioClip tabtoplay;
     private void Awake()
     {
         if (Instance)

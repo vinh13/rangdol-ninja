@@ -7168,6 +7168,9 @@ MonoBehaviour:
   spiderShoot: {fileID: 8300000, guid: 6e85f086bc9fadb46a0e35b858c347a0, type: 3}
   Ui: {fileID: 8300000, guid: 4b54fc4ccc1192343aeb8c0f12913827, type: 3}
   Win: {fileID: 8300000, guid: 7bda4d4b523512745b78939cd0fcb5fd, type: 3}
+  thunggo: {fileID: 8300000, guid: 61bcde2ccd0e67b42924b52b5bee7699, type: 3}
+  upgrade: {fileID: 8300000, guid: 40fdd1a014275c04f832ff758ce40955, type: 3}
+  tabtoplay: {fileID: 8300000, guid: e3ec30232a5b2464e914a269ac9b097d, type: 3}
 --- !u!4 &1872768036
 Transform:
   m_ObjectHideFlags: 0

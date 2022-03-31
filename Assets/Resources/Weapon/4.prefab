@@ -153,7 +153,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -4.9368377, y: 2.4634895, z: 0.0641318}
+  m_ConnectedAnchor: {x: 0.107, y: 0.141, z: -0.017}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Blood: {fileID: 8340472397113994125}
+  sound: {fileID: 8300000, guid: bf9e1166561b9824a88d2a6207535590, type: 3}
 --- !u!114 &8742837187775891298
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,7 +49,6 @@ public class PlayerController : CharacterBase
     private void Start()
     {
         setHp();
-
         ActionBase.getTagetCamAction(gameObject);
         ActionBase.getJoyStickAction = getJoy;
         ActionBase.ReviveAction = Revive;

@@ -18,6 +18,7 @@ public class Crate : MonoBehaviour
            
             if (collision.gameObject.tag == keysave.tagWeapon)
             {
+                AudioManager.Instance.playSound(AudioManager.Instance.thunggo);
                 alive = false;
                 ob_Break.SetActive(true);
                 box.SetActive(false);
