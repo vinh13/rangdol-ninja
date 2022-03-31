@@ -57,13 +57,15 @@ public class adsManager : MonoBehaviour
         a = val;
         a.Invoke();
 #else
-        bool available = IronSource.Agent.isRewardedVideoAvailable();
-        if (available)
-        {
-            a = val;
-            IronSource.Agent.showRewardedVideo();
+        a = val;
+        a.Invoke();
+        //bool available = IronSource.Agent.isRewardedVideoAvailable();
+        //if (available)
+        //{
+        //    a = val;
+        //    IronSource.Agent.showRewardedVideo();
 
-        }
+        //}
 #endif
 
 

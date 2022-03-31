@@ -5,6 +5,8 @@ using UnityEngine;
 public class bullet : WeaponBase
 {
     int speed;
+    [SerializeField] bool setGunPlayer;
+  
     private void Start()
     {
         speed = keysave.SpeedBullet;
@@ -20,6 +22,14 @@ public class bullet : WeaponBase
     }
     private void OnEnable()
     {
+        if (setGunPlayer)
+        {
+           // AudioManager.Instance.playSound(AudioManager.Instance.spiderShoot);
+        }
+        else
+        {
+           // AudioManager.Instance.playSound(AudioManager.Instance.arrowShoot);
+        }
         StartCoroutine("timeOff");
     }
     private void OnDisable()

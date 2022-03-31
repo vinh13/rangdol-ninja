@@ -109,11 +109,11 @@ public class CanvasManager : MonoBehaviour
     }
     public void playGame()
     {
+        AudioManager.Instance.onBg(true);
         ac_Setting.Invoke();
         MenuMain.SetActive(false);
         GamePlayUI.SetActive(true);
         BoxStart.SetActive(true);
-
     }
     public void onShop()
     {
@@ -122,10 +122,13 @@ public class CanvasManager : MonoBehaviour
     }
     public void onPause()
     {
+        // Skip
+       
         MenuMain.SetActive(true);
         ActionBase.replayLevelAction();
         GamePlayUI.gameObject.SetActive(false);
         BoxStart.gameObject.SetActive(false);
+        AudioManager.Instance.onBg(false);
     }
     private void checkUpgapeHP()
     {
@@ -239,7 +242,7 @@ public class CanvasManager : MonoBehaviour
         ActionBase.AtkUpgrape();
         checkUpgapeHP();
         checkUpgapeATK();
-    }
+    } 
     public void btnremoveads()
     {
         ac_Setting.Invoke();
@@ -249,5 +252,9 @@ public class CanvasManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(Purchaser.removeAds, 1);
         removeAdsBtn.SetActive(false);
+    }
+    public void onSoundBtn()
+    {
+        AudioManager.Instance.playSound(AudioManager.Instance.Ui);
     }
 }

@@ -10,16 +10,9 @@ public class FxWall : MonoBehaviour
         {
           
             Vector3 globalPositionOfContact = collision.contacts[0].point;
-            Vector3 tempForw = (collision.transform.position - transform.position).normalized;
+            Vector3 tempForw = (globalPositionOfContact - transform.position).normalized;
           
-            if (tempForw.y >=0.8f)
-            {
-                tempForw = Vector3.up ;
-            }
-            else
-            {
-                tempForw = Vector3.right;
-            }
+           
            
             EffectBloodManager.Instance.showEffectWall(globalPositionOfContact, tempForw);
 

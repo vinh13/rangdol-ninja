@@ -33,6 +33,7 @@ public class WinManager : MonoBehaviour
     {
         WinBase.SetActive(false);
         yield return new WaitForSeconds(1);
+        AudioManager.Instance.playSound(AudioManager.Instance.Win);
         WinBase.SetActive(true);
         Contine_L[0].SetActive(0 == (index_x5 % 2));
         Contine_L[1].SetActive(0 != (index_x5 % 2));

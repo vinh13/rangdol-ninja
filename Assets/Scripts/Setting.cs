@@ -37,6 +37,7 @@ public class Setting : MonoBehaviour
     {
        
         PlayerPrefs.SetInt(keysave.Sound, indexSound);
+        AudioManager.Instance.setSound(indexSound);
         for (int i = 0; i < L_iconSound.Count; i++)
         {
             L_iconSound[i].SetActive(i == indexSound);
@@ -51,6 +52,7 @@ public class Setting : MonoBehaviour
     {
         indexSound = (indexSound == 1) ? 0 : 1;
         PlayerPrefs.SetInt(keysave.Sound, indexSound);
+        AudioManager.Instance.setSound(indexSound);
         for (int i = 0; i < L_iconSound.Count; i++)
         {
             L_iconSound[i].SetActive(i == indexSound);
