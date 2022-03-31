@@ -131,8 +131,14 @@ public class Enemy : CharacterBase
                 }
                 StopCoroutine("timedelayGun");
                 ActionBase.removeEnemy(gameObject);
+                AudioManager.Instance.die();
                 gameObject.SetActive(false);
             }
+            else
+            {
+                AudioManager.Instance.hitEnemy();
+            }
+          
         }
 
 

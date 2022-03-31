@@ -157,6 +157,21 @@ public class CopyAnim : MonoBehaviour
                 }
 
             }
+            else if (collision.gameObject.tag == keysave.tagSaw)
+            {
+                
+                a.Invoke(collision.gameObject.GetComponent<WeaponBase>().Damp);
+                if (collision.gameObject.GetComponent<bullet>() != null)
+                {
+                    collision.gameObject.SetActive(false);
+                }
+                breakSkelet();
+                if (Weapon != null)
+                {
+                    Weapon.layer = 11;
+                }
+                AudioManager.Instance.playSound(AudioManager.Instance.sawActive);
+            }
         }
 
     }

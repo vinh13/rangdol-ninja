@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 6048864210914610436}
   m_Layer: 13
   m_Name: Saw
-  m_TagString: Weapon
+  m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

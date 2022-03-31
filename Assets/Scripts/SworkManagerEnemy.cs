@@ -5,6 +5,8 @@ using UnityEngine;
 public class SworkManagerEnemy : WeaponBase
 {
     [SerializeField] GameObject Blood;
+
+   
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")

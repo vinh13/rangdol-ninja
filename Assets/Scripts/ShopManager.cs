@@ -124,12 +124,13 @@ public class ShopManager : MonoBehaviour
             btnBuyWeapon.SetActive(false);
             PlayerPrefs.SetInt(keysave.indexMaterial, indexSkin);
             ActionBase.getMaterialPlayer();
-            select.transform.parent = itemSkin[indexSkin].transform;
-            select.transform.localPosition = Vector3.zero;
-            select.transform.SetSiblingIndex(0);
+          
         }
-    
-       
+        select.transform.parent = itemSkin[val].transform;
+        select.transform.localPosition = Vector3.zero;
+        select.transform.SetSiblingIndex(0);
+
+
 
     }
     public void BuySkin()
@@ -217,10 +218,11 @@ public class ShopManager : MonoBehaviour
             btnBuyWeapon.SetActive(false);
             PlayerPrefs.SetInt(keysave.indexWeapon, indexWeapon);
             ActionBase.getWeaponPlayer();
-            select.transform.parent = itemWeapon[indexWeapon].transform;
-            select.transform.localPosition = Vector3.zero;
-            select.transform.SetSiblingIndex(0);
+           
         }
+        select.transform.parent = itemWeapon[val].transform;
+        select.transform.localPosition = Vector3.zero;
+        select.transform.SetSiblingIndex(0);
     }
     public void BuyWeapon()
     {
@@ -296,7 +298,11 @@ public class ShopManager : MonoBehaviour
         select.transform.parent = itemSkin[indexSkin].transform;
         select.transform.localPosition = Vector3.zero;
         select.transform.SetSiblingIndex(0);
-
+        CharBase.SetActive(false);
+        for (int i = 0; i < L_skinMesh.Count; i++)
+        {
+            L_skinMesh[i].SetActive(indexSkin == i);
+        }
 
 
     }
@@ -327,6 +333,11 @@ public class ShopManager : MonoBehaviour
         select.transform.parent = itemWeapon[indexWeapon].transform;
         select.transform.localPosition = Vector3.zero;
         select.transform.SetSiblingIndex(0);
+        WeaponBase.SetActive(false);
+        for (int i = 0; i < L_Weapon.Count; i++)
+        {
+            L_Weapon[i].SetActive(indexWeapon == i);
+        }
 
 
     }

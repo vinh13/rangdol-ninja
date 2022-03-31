@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &75577509
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -341,6 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &81099778
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -724,6 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &149842981
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -945,6 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &170255720
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1129,6 +1133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &204540394
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1220,6 +1225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelIndex: 0
+  setDebug: 0
 --- !u!4 &211433849
 Transform:
   m_ObjectHideFlags: 0
@@ -1360,6 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &477351536
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1728,6 +1735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &567602898
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2006,6 +2014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &623610069
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2146,6 +2155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &628567415
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2605,6 +2615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &725294505
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2701,6 +2712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &738339478
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2841,6 +2853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &750302984
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3025,6 +3038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &770769441
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3609,6 +3623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &870223968
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3842,6 +3857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &962785794
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4208,6 +4224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &1052417372
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4804,6 +4821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &1356449258
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5219,6 +5237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &1474401311
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5359,6 +5378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &1478191838
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5727,6 +5747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &1607992367
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5960,6 +5981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &1644460178
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6131,6 +6153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!54 &1709093339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6331,6 +6354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &1753296117
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6427,6 +6451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &1772129636
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6793,6 +6818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 1
 --- !u!136 &1834085642
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6889,6 +6915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &1869494735
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6994,6 +7021,168 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1872768033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872768036}
+  - component: {fileID: 1872768035}
+  - component: {fileID: 1872768034}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1872768034
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872768033}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1872768035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872768033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70651b2d435480642b2eaaa2623b206c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1872768034}
+  BG: {fileID: 2029066017}
+  arrowShoot: {fileID: 8300000, guid: 1c7ed345bf53f06458bee80a88cc3dce, type: 3}
+  L_Die:
+  - {fileID: 8300000, guid: 5e8ae36b71371574a9840e006ab65e86, type: 3}
+  - {fileID: 8300000, guid: c19b50275a5536c48a4816e904b4ab91, type: 3}
+  - {fileID: 8300000, guid: 205a0979f0cc5ee4bb1eb2b39f99f2ec, type: 3}
+  - {fileID: 8300000, guid: 3dbec793c5d4f8744a84c0da6abbcbff, type: 3}
+  - {fileID: 8300000, guid: 02b6958872e7ab3488c745c3f67a00d5, type: 3}
+  L_HitEnemy:
+  - {fileID: 8300000, guid: cbb9a9ebf8f35d143a180e086aff14fa, type: 3}
+  - {fileID: 8300000, guid: b349ed527f9525346a912dbcd0adaf7b, type: 3}
+  - {fileID: 8300000, guid: 0a7a06a304d9bfe47b1d2cef348688bc, type: 3}
+  L_HitPlayer:
+  - {fileID: 8300000, guid: b349ed527f9525346a912dbcd0adaf7b, type: 3}
+  - {fileID: 8300000, guid: 0a7a06a304d9bfe47b1d2cef348688bc, type: 3}
+  - {fileID: 8300000, guid: 753f170ad42b5804f865f4395145d29a, type: 3}
+  sawActive: {fileID: 8300000, guid: 6c86ac6c1476a7c44bf9820d6b2c887f, type: 3}
+  spiderShoot: {fileID: 8300000, guid: 6e85f086bc9fadb46a0e35b858c347a0, type: 3}
+  Ui: {fileID: 8300000, guid: 4b54fc4ccc1192343aeb8c0f12913827, type: 3}
+  Win: {fileID: 8300000, guid: 7bda4d4b523512745b78939cd0fcb5fd, type: 3}
+--- !u!4 &1872768036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872768033}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.782518, y: 24.372665, z: -0.58903956}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2029066016}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1902209232
 GameObject:
   m_ObjectHideFlags: 0
@@ -7029,6 +7218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &1902209234
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7212,6 +7402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &2017232481
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7317,6 +7508,133 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2029066015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029066016}
+  - component: {fileID: 2029066017}
+  m_Layer: 0
+  m_Name: bg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2029066016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029066015}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1872768036}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2029066017
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029066015}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2c5ffe816b8cc254f802c9c195f8470f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2105418843
 GameObject:
   m_ObjectHideFlags: 0
@@ -7352,6 +7670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damp: 3
+  setGunPlayer: 0
 --- !u!136 &2105418845
 CapsuleCollider:
   m_ObjectHideFlags: 0

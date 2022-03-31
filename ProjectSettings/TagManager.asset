@@ -12,6 +12,7 @@ TagManager:
   - Play
   - Barrel
   - Wall
+  - Saw
   layers:
   - Default
   - TransparentFX

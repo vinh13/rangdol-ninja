@@ -221,11 +221,12 @@ public class PlayerController : CharacterBase
                     {
                         Weapon.GetComponent<WeaponSpider>().stopShot();
                     }
+                    AudioManager.Instance.die();
 
                 }
                 else
                 {
-
+                    AudioManager.Instance.hitEnemy();
                     EffectBloodManager.Instance.showEffectBlood(gameObject);
                 }
             }

@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class WeaponBase : MonoBehaviour
 {
-
     public float Damp;
 }

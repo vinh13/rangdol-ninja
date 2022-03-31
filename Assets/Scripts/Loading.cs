@@ -12,6 +12,7 @@ public class Loading : MonoBehaviour
 	float tece;
 	AsyncOperation async;
 	public int levelIndex;
+	[SerializeField] bool setDebug;
     private void Awake()
     {
 		tece = 0;
@@ -32,7 +33,12 @@ public class Loading : MonoBehaviour
 			
 		}
 		Application.targetFrameRate = 60;
-		PlayerPrefs.SetInt(keysave.Level, levelIndex);
+		PlayerPrefs.SetInt(keysave.Coin, 50000);
+		if (setDebug)
+        {
+			PlayerPrefs.SetInt(keysave.Level, levelIndex);
+		}
+		
 	}
     private void Start()
 	{
