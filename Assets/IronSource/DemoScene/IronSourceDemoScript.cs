@@ -37,6 +37,9 @@ public class IronSourceDemoScript : MonoBehaviour
     void OnEnable()
     {
 
+        //Add Init Event
+        IronSourceEvents.onSdkInitializationCompletedEvent += SdkInitializationCompletedEvent;
+        
         //Add Rewarded Video Events
         IronSourceEvents.onRewardedVideoAdOpenedEvent += RewardedVideoAdOpenedEvent;
         IronSourceEvents.onRewardedVideoAdClosedEvent += RewardedVideoAdClosedEvent;
@@ -183,6 +186,14 @@ public class IronSourceDemoScript : MonoBehaviour
 
     }
     
+    #region Init callback handlers
+
+    void SdkInitializationCompletedEvent()
+    {
+        Debug.Log("unity-script: I got SdkInitializationCompletedEvent");
+    }
+
+    #endregion
 
     #region RewardedAd callback handlers
 

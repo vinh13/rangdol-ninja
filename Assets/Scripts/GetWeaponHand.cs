@@ -4,13 +4,18 @@ using UnityEngine;
 using System;
 [Serializable]
 public enum typeWeaponEne { 
-     W_0,
+   W_0,
     W_1,
     W_2,
     W_3,
     W_4,
     W_5,
     W_6,
+    W_7,
+    W_8,
+    W_9,
+    W_10,
+    W_11,
 
 }
 public enum typeSwordHand

@@ -846,6 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 1
   target: {fileID: 0}
   setFly: 0
@@ -1057,6 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 1
   target: {fileID: 0}
   setFly: 0
@@ -1112,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c82bf010f4a9b47b9e5c618a568fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGame: 0
   alive: 0
   Hip: {fileID: 791590468269814199}
   balence: {fileID: 4514502067426881874}
@@ -1127,6 +1130,7 @@ MonoBehaviour:
   - {fileID: 6491292095703250249}
   - {fileID: 1557040327978875835}
   uiBlood: {fileID: 4514502074120965035}
+  setT_HP: 0
   type: 0
   L_Weapon:
   - {fileID: 267057349155069540}
@@ -1353,6 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -1931,6 +1936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 1
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -2111,6 +2117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -2291,6 +2298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -2472,6 +2480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 1
   target: {fileID: 0}
   setFly: 0
@@ -2682,6 +2691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -3117,6 +3127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 2
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -3481,6 +3492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 1
   target: {fileID: 0}
   setFly: 0

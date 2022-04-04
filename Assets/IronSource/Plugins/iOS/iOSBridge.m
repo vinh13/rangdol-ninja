@@ -157,11 +157,11 @@ char *const IRONSOURCE_EVENTS = "IronSourceEvents";
 }
 
 - (void)initWithAppKey:(NSString *)appKey {
-    [IronSource initWithAppKey:appKey];
+    [IronSource initWithAppKey:appKey delegate:self];
 }
 
 - (void)initWithAppKey:(NSString *)appKey adUnits:(NSArray<NSString *> *)adUnits {
-    [IronSource initWithAppKey:appKey adUnits:adUnits];
+    [IronSource initWithAppKey:appKey adUnits:adUnits delegate:self];
 }
 
 - (void)initISDemandOnly:(NSString *)appKey adUnits:(NSArray<NSString *> *)adUnits {
@@ -229,6 +229,12 @@ char *const IRONSOURCE_EVENTS = "IronSourceEvents";
 
 - (BOOL)isDemandOnlyRewardedVideoAvailable:(NSString *)instanceId {
     return [IronSource hasISDemandOnlyRewardedVideo:instanceId];
+}
+
+#pragma mark Init Delegate
+
+- (void)initializationDidComplete {
+    UnitySendMessage(IRONSOURCE_EVENTS, "onSdkInitializationCompleted", "");
 }
 
 #pragma mark Rewarded Video Delegate

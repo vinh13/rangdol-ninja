@@ -2,10 +2,14 @@
 {
     public const string interstitialBridgeListenerClass = "com.ironsource.unity.androidbridge.UnityInterstitialListener";
     public const string rewardedVideoBridgeListenerClass = "com.ironsource.unity.androidbridge.UnityRewardedVideoListener";
+    public const string rewardedVideoManualBridgeListenerClass = "com.ironsource.unity.androidbridge.UnityRewardedVideoManualListener";
     public const string bridgeClass = "com.ironsource.unity.androidbridge.AndroidBridge";
     public const string offerwallBridgeListenerClass = "com.ironsource.unity.androidbridge.UnityOfferwallListener";
     public const string bannerBridgeListenerClass = "com.ironsource.unity.androidbridge.UnityBannerListener";
     public const string segmentBridgeListenerClass = "com.ironsource.unity.androidbridge.UnitySegmentListener";
+    public const string impressionDataBridgeListenerClass = "com.ironsource.unity.androidbridge.UnityImpressionDataListener";
+    public const string initializeBridgeListenerClass = "com.ironsource.unity.androidbridge.UnityInitializationListener";
+    public const string GET_INSTANCE_KEY = "getInstance";
     public const string ERROR_CODE = "error_code";
     public const string ERROR_DESCRIPTION = "error_description";
     public const string INSTANCE_ID_KEY = "instanceId";
@@ -23,7 +27,7 @@
     public const string IMPRESSION_DATA_KEY_PRECISION = "precision";
     public const string IMPRESSION_DATA_KEY_LIFETIME_REVENUE = "lifetimeRevenue";
     public const string IMPRESSION_DATA_KEY_ENCRYPTED_CPM = "encryptedCPM";
-    public const string IMPRESSION_DATA_KEY_CONVERSION_VALUE= "conversionValue";
+    public const string IMPRESSION_DATA_KEY_CONVERSION_VALUE = "conversionValue";
     public const string GENDER_MALE = "male";
     public const string GENDER_FEMALE = "female";
     public const string GENDER_UNKNOWN = "unknown";
@@ -32,8 +36,4 @@
     public const string IRONSOURCE_MEDIATED_NETWORK_SETTING_NAME = "IronSourceMediatedNetworkSettings";
     public const string IRONSOURCE_RESOURCES_PATH = "Assets/IronSource/Resources";
     public const string IRONSOURCE_SKAN_ID_KEY = "su67r6k2v3.skadnetwork";
-
-    public const string impressionDataBridgeListenerClass = "com.ironsource.unity.androidbridge.UnityImpressionDataListener";
-    public const string GET_INSTANCE_KEY = "getInstance";
-
 }

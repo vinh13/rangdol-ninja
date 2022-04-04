@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bdb1d213514c048af754e3638a9fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGame: 0
   alive: 0
   Hip: {fileID: 2696007897321773411}
   balence: {fileID: 1238723020197157254}

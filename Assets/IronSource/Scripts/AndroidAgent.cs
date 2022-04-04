@@ -15,6 +15,7 @@ public class AndroidAgent : IronSourceIAgent
 	public AndroidAgent ()
 	{
 		Debug.Log ("AndroidAgent ctr");
+		initEventsDispatcher();
 	}
 	
 #region IronSourceIAgent implementation
@@ -25,6 +26,11 @@ public class AndroidAgent : IronSourceIAgent
 				_androidBridge = pluginClass.CallStatic<AndroidJavaObject> ("getInstance");
 		
 		return _androidBridge;
+	}
+
+	private void initEventsDispatcher()
+	{
+		IronSourceEventsDispatcher.initialize();
 	}
 
 	//******************* Base API *******************//

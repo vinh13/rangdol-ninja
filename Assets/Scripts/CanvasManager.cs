@@ -109,6 +109,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void playGame()
     {
+        Time.timeScale = 1;
         AudioManager.Instance.onBg(true);
         ac_Setting.Invoke();
         MenuMain.SetActive(false);

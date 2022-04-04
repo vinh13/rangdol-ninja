@@ -26,6 +26,7 @@ public static class ActionBase
     public static Action moveCam;
     public static Action<GameObject> GetEnemy;
     public static Action<GameObject> removeEnemy;
+    public static Action<Vector3> setForceAc;
 
 
 }

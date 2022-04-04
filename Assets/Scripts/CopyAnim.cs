@@ -7,9 +7,19 @@ public enum typeCut
     None,
     Cut
 }
+public enum typeAttack {
+    None,
+    Head,
+    Body,
+    Hand,
+    Boss
+
+}
+
 
 public class CopyAnim : MonoBehaviour
 {
+    public typeAttack TypeAttack;
     public typeCut type;
     public Transform target;
     ConfigurableJoint join;
@@ -18,7 +28,7 @@ public class CopyAnim : MonoBehaviour
     public bool setFly;
     [HideInInspector]
     public bool alive;
-    Action<float> a;
+    Action<float, typeAttack> a;
     Action b;
     string tag;
     int layer;
@@ -58,7 +68,7 @@ public class CopyAnim : MonoBehaviour
             }
         }
     }
-    public void checkSkelet(Action<float> val_0,Action val_1)
+    public void checkSkelet(Action<float,typeAttack> val_0,Action val_1)
     {
         a = val_0;
         b = val_1;
@@ -68,7 +78,6 @@ public class CopyAnim : MonoBehaviour
         alive = false;
         gameObject.tag = keysave.tagDie;
         gameObject.layer = 11;
-
         JointDrive drive = new JointDrive();
         drive.mode = JointDriveMode.Position;
         drive.positionSpring = 0;
@@ -145,7 +154,7 @@ public class CopyAnim : MonoBehaviour
         {
             if (collision.gameObject.tag ==keysave.tagWeapon)
             {
-                a.Invoke(collision.gameObject.GetComponent<WeaponBase>().Damp);
+                a.Invoke(collision.gameObject.GetComponent<WeaponBase>().Damp, TypeAttack); 
                 if (collision.gameObject.GetComponent<bullet>() != null)
                 {
                     collision.gameObject.SetActive(false);
@@ -160,7 +169,7 @@ public class CopyAnim : MonoBehaviour
             else if (collision.gameObject.tag == keysave.tagSaw)
             {
                 
-                a.Invoke(collision.gameObject.GetComponent<WeaponBase>().Damp);
+                a.Invoke(collision.gameObject.GetComponent<WeaponBase>().Damp, TypeAttack);
                 if (collision.gameObject.GetComponent<bullet>() != null)
                 {
                     collision.gameObject.SetActive(false);
@@ -181,7 +190,7 @@ public class CopyAnim : MonoBehaviour
         {
             if (other.gameObject.tag == keysave.tagBarrel)
             {
-                a.Invoke(other.gameObject.GetComponent<WeaponBase>().Damp);
+                a.Invoke(other.gameObject.GetComponent<WeaponBase>().Damp, TypeAttack);
                 if (other.gameObject.GetComponent<bullet>() != null)
                 {
                     other.gameObject.SetActive(false);

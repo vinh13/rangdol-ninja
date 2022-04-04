@@ -44,13 +44,9 @@ public class CameraManager : MonoBehaviour
             {
                 smoothMoveCam += Time.deltaTime;
             }
-
-         
-            transform.position = Vector3.SmoothDamp(transform.position, new Vector3(smoothMoveCam * 2.5f, 0, 0) + disPC + Target.transform.position, ref velocity, 0.12f);
+            transform.position = Vector3.SmoothDamp(transform.position,  disPC + Target.transform.position, ref velocity, 0.12f);
 
         }
-
-
     }
     private void getTarget(GameObject val)
     {
