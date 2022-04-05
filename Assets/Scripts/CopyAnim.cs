@@ -83,12 +83,11 @@ public class CopyAnim : MonoBehaviour
         drive.positionSpring = 0;
         drive.positionDamper = 10;
         drive.maximumForce = 3.4f * Mathf.Pow(10, 38);
-
         join.angularXDrive = drive;
         join.angularYZDrive = drive;
         if ((int)type == 0)
         {
-            rig.AddForce(Vector3.up * 3000);
+            rig.AddForce(Vector3.up * 100);
         }
     }
 
@@ -136,7 +135,8 @@ public class CopyAnim : MonoBehaviour
             join.angularYMotion = ConfigurableJointMotion.Free;
             join.angularZMotion = ConfigurableJointMotion.Free;
             gameObject.layer = 11;
-            gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 20000);
+            gameObject.GetComponent<Rigidbody>().AddForce(transform.right * 500);
+
             if (skelet != null)
             {
                 skelet.breakSkelet();
