@@ -13,7 +13,7 @@ public class WeaponManager : MonoBehaviour
         {
             Vector3 globalPositionOfContact = collision.contacts[0].point;
             Vector3 tempForw = (globalPositionOfContact - transform.position).normalized;
-            ActionBase.setForceAc(tempForw * 25);
+            ActionBase.setForceAc(tempForw * 50);
             AudioManager.Instance.playSound(sound);
             StopCoroutine("timeBlood");
             StartCoroutine("timeBlood");
@@ -22,12 +22,12 @@ public class WeaponManager : MonoBehaviour
         {
             Vector3 globalPositionOfContact = collision.contacts[0].point;
             Vector3 tempForw = (globalPositionOfContact - transform.position).normalized;
-            ActionBase.setForceAc(tempForw * 25);
+            ActionBase.setForceAc(tempForw * 50);
             AudioManager.Instance.playSound(sound);
             StopCoroutine("timeBlood");
             StartCoroutine("timeBlood");
-          //  StopCoroutine("timeScale");
-         //   StartCoroutine("timeScale");
+            StopCoroutine("timeScale");
+            StartCoroutine("timeScale");
         }
     }
     IEnumerator timeScale()
