@@ -11,9 +11,7 @@ public class FxWall : MonoBehaviour
           
             Vector3 globalPositionOfContact = collision.contacts[0].point;
             Vector3 tempForw = (globalPositionOfContact - transform.position).normalized;
-          
-           
-           
+
             EffectBloodManager.Instance.showEffectWall(globalPositionOfContact, tempForw);
 
 

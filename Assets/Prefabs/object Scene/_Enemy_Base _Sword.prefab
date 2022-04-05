@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -443,6 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 1
   target: {fileID: 0}
   setFly: 0
@@ -623,6 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -803,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -982,6 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 1
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -1283,6 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 1
   target: {fileID: 0}
   setFly: 0
@@ -1495,6 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 2
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -2232,6 +2239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 0
   target: {fileID: 0}
   setFly: 0
@@ -2444,6 +2452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 1
   target: {fileID: 0}
   setFly: 0
@@ -2499,6 +2508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c82bf010f4a9b47b9e5c618a568fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGame: 0
   alive: 0
   Hip: {fileID: 6253190098953267727}
   balence: {fileID: 7105901361537559274}
@@ -2514,6 +2524,7 @@ MonoBehaviour:
   - {fileID: 445350387313454833}
   - {fileID: 5305301900943728643}
   uiBlood: {fileID: 7105901354776350739}
+  setT_HP: 0
   type: 1
   L_Weapon: []
   L_Laser: []
@@ -2532,8 +2543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a36fb18cbb4b294cb162e7de1dbe7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  indexWeapon: 2
+  typeWeapon: 0
+  typeHand: 0
   L_Hand:
   - {fileID: 1465261478487565382}
   - {fileID: 3988731569823469516}
@@ -2710,6 +2721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368b821047150047978c0a1ff4d83dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeAttack: 3
   type: 1
   target: {fileID: 0}
   setFly: 0

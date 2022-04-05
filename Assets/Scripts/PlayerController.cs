@@ -21,12 +21,15 @@ public class PlayerController : CharacterBase
     int indexMae;
     int indexWeapon;
     Vector3 celocity;
+    bool vwang;
+    Rigidbody RigHip;
     private void Awake()
     {
         if (!Instance)
         {
             Instance = this;
         }
+        RigHip = Hip.GetComponent<Rigidbody>();
         setanim = true;
         setanim = false;
         setRevive = false;
@@ -49,7 +52,6 @@ public class PlayerController : CharacterBase
     private void Start()
     {
         setHp();
-
         ActionBase.getTagetCamAction(gameObject);
         ActionBase.getJoyStickAction = getJoy;
         ActionBase.ReviveAction = Revive;
@@ -57,6 +59,7 @@ public class PlayerController : CharacterBase
         ActionBase.HpUpgrape = setHp;
         ActionBase.getMaterialPlayer = setMaterial;
         ActionBase.getWeaponPlayer = chooseWeapon;
+        ActionBase.setForceAc = setForce;
         for (int i = 0; i < CopyAnim.Count; i++)
         {
             CopyAnim[i].checkSkelet(Die, null);
@@ -99,13 +102,25 @@ public class PlayerController : CharacterBase
         ActionBase.getMaterialPlayer -= setMaterial;
         ActionBase.getWeaponPlayer -= chooseWeapon;
     }
+    private void setForce(Vector3 val)
+    {
+        StopCoroutine("timeSetForce");
+        RigHip.velocity = -val;
+        StartCoroutine("timeSetForce");
+    }
+    IEnumerator timeSetForce()
+    {
+        vwang = true;
+        yield return new WaitForSeconds(0.5f);
+        vwang = false;
+    }
 
     private void Update()
     {
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
         if (alive)
         {
-            if (joy != null && joy.Direction != Vector2.zero)
+            if (joy != null && joy.Direction != Vector2.zero && !vwang)
             {
 
                 if (RigWEAPON != null)
@@ -119,18 +134,10 @@ public class PlayerController : CharacterBase
                     checkAnimfly(setanim);
                 }
                 balence.transform.position = Hip.transform.position + (new Vector3(joy.Direction.x, joy.Direction.y, 0));
-
-
             }
             else
             {
-                Vector3 targetAngle = new Vector3(0f, 180, 0f);
-                Vector3 currentAngle = transform.eulerAngles;
-                currentAngle = new Vector3(
-           Mathf.LerpAngle(currentAngle.x, targetAngle.x, Time.deltaTime*50),
-           Mathf.LerpAngle(currentAngle.y, targetAngle.y, Time.deltaTime*50),
-           Mathf.LerpAngle(currentAngle.z, targetAngle.z, Time.deltaTime*50));
-                transform.eulerAngles = currentAngle;
+               
                 if (setanim)
                 {
                     setRig(setanim);
@@ -154,6 +161,7 @@ public class PlayerController : CharacterBase
 
     private void win()
     {
+
         setWin = true;
     }
 
@@ -198,13 +206,15 @@ public class PlayerController : CharacterBase
             CopyAnim[i].setAlive();
         }
     }
-    public void Die(float damp)
+    public void Die(float damp, typeAttack valType)
     {
         if (!setRevive)
         {
-            if (alive && !setWin)
+            if (alive && !setWin && setT_HP)
             {
+                StartCoroutine(timeDelayAttack());
                 HP -= infoLvl.ATKbase * damp;
+
                 setUIBlood();
                 if (HP <= 0)
                 {
@@ -231,9 +241,6 @@ public class PlayerController : CharacterBase
                 }
             }
         }
-
-
-
     }
     private void Revive()
     {
@@ -257,10 +264,10 @@ public class PlayerController : CharacterBase
     IEnumerator timeRevive()
     {
         setRevive = true;
-        ; yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2);
         setRevive = false;
     }
-   
+
 
 
 }

@@ -109,6 +109,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void playGame()
     {
+        Time.timeScale = 1;
         AudioManager.Instance.onBg(true);
         ac_Setting.Invoke();
         MenuMain.SetActive(false);
@@ -168,6 +169,7 @@ public class CanvasManager : MonoBehaviour
             txtLevelHp.text = (levelHp + 2).ToString();
             PlayerPrefs.SetInt(keysave.updateHP, levelHp);
             ActionBase.HpUpgrape();
+            AudioManager.Instance.playSound(AudioManager.Instance.upgrade);
 
         }
         checkUpgapeHP();
@@ -187,6 +189,7 @@ public class CanvasManager : MonoBehaviour
         ActionBase.HpUpgrape();
         checkUpgapeHP();
         checkUpgapeATK();
+        AudioManager.Instance.playSound(AudioManager.Instance.upgrade);
     }
     private void checkUpgapeATK()
     {
@@ -225,6 +228,7 @@ public class CanvasManager : MonoBehaviour
             txtLevelAtk.text = (levelAtk + 2).ToString();
             PlayerPrefs.SetInt(keysave.updateWeapon, levelAtk);
             ActionBase.AtkUpgrape();
+            AudioManager.Instance.playSound(AudioManager.Instance.upgrade);
         }
         checkUpgapeHP();
         checkUpgapeATK();
@@ -242,6 +246,7 @@ public class CanvasManager : MonoBehaviour
         ActionBase.AtkUpgrape();
         checkUpgapeHP();
         checkUpgapeATK();
+        AudioManager.Instance.playSound(AudioManager.Instance.upgrade);
     } 
     public void btnremoveads()
     {
@@ -256,5 +261,9 @@ public class CanvasManager : MonoBehaviour
     public void onSoundBtn()
     {
         AudioManager.Instance.playSound(AudioManager.Instance.Ui);
+    }
+    public void onSoundTapToPlay()
+    {
+        AudioManager.Instance.playSound(AudioManager.Instance.tabtoplay);
     }
 }

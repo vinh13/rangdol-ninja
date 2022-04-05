@@ -9,6 +9,8 @@ public class CharacterBase : MonoBehaviour
    
     
     [HideInInspector]
+    public bool startGame;
+    [HideInInspector]
     public bool alive;
     public GameObject Hip;
     public GameObject balence;
@@ -22,12 +24,14 @@ public class CharacterBase : MonoBehaviour
     [HideInInspector]
     protected InfoLevel infoLvl;
     [SerializeField] Image uiBlood;
-
+    [HideInInspector]
+    public bool setT_HP;
     private void OnEnable()
     {
         alive = true;
-      
-        pos = Hip.transform.localPosition;
+        setT_HP = true;
+        startGame = false;
+          pos = Hip.transform.localPosition;
         ActionBase.getChildAction(Hip);
         infoLvl = GameManager.Instance.ifLvl();
         checkAnim();
@@ -35,11 +39,20 @@ public class CharacterBase : MonoBehaviour
     protected void setUIBlood()
     {
         float a = HP / HPBase;
-        if (a < 0)
+        if(a<0.1f && a > 0)
+        {
+            uiBlood.fillAmount = 0.1f;
+        }
+        else if (a <= 0)
         {
             a = 0;
+            uiBlood.fillAmount = a;
         }
-        uiBlood.fillAmount = a;
+        else
+        {
+            uiBlood.fillAmount = a;
+        }
+       
     }
     void checkAnim()
     {
@@ -47,6 +60,12 @@ public class CharacterBase : MonoBehaviour
         {
             CopyAnim[i].target = AimationBase.Instance.L_Skelet[i];
         }
+    }
+    public IEnumerator timeDelayAttack()
+    {
+        setT_HP = false;
+        yield return new WaitForSeconds(0.3f);
+        setT_HP = true;
     }
 
 }

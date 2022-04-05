@@ -37,7 +37,6 @@ public class Enemy : CharacterBase
         {
             val_rate = 4;
         }
-
         HP = infoLvl.HPbase * val_rate;
         HPBase = HP;
         ActionBase.getCountInGamePlay();
@@ -45,7 +44,6 @@ public class Enemy : CharacterBase
         {
             CopyAnim[i].checkSkelet(Die, StopGun);
         }
-
         //       Sword
         for (int i = 0; i < L_Weapon.Count; i++)
         {
@@ -57,9 +55,6 @@ public class Enemy : CharacterBase
             laserLine = L_Laser[((int)type)];
         }
         setStartGun = false;
-
-
-
     }
     void Update()
     {
@@ -107,11 +102,34 @@ public class Enemy : CharacterBase
         }
 
     }
-    public void Die(float damp)
+  
+    public void Die(float damp, typeAttack valType)
     {
-        if (alive)
+        if (alive && setT_HP)
         {
-            HP -= infoLvl.ATKbase * damp;
+            StartCoroutine(timeDelayAttack());
+            int val = (int)valType;
+            if (val == 1)
+            {
+                HP -= HPBase;
+            }
+            else if (val == 2)
+            {
+                HP -= ((HPBase / 100.0f) * 50);
+            }
+            else if (val == 3)
+            {
+                HP -= ((HPBase / 100.0f) * 35);
+            }
+            else if (val == 4)
+            {
+                HP -= ((HPBase / 100.0f) * 10);
+            }
+            else
+            {
+                HP -= infoLvl.ATKbase * damp;
+            }
+          
             setUIBlood();
             if (HP <= 0)
             {

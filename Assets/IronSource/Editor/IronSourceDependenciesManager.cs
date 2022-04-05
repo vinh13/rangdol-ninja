@@ -174,6 +174,7 @@ public class IronSourceDependenciesManager : EditorWindow
         return version;
     }
 
+    [Obsolete]
     private IEnumerator GetVersions()
     {
         UnityWebRequest unityWebRequest = UnityWebRequest.Get(jsonURL);

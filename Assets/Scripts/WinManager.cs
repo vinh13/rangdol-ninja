@@ -14,6 +14,7 @@ public class WinManager : MonoBehaviour
     public List<GameObject> Contine_L;
     int index_x5;
     int coin;
+    [SerializeField] GameObject nothanks;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class WinManager : MonoBehaviour
     }
     IEnumerator timedelaybase()
     {
+        nothanks.SetActive(false);
         WinBase.SetActive(false);
         yield return new WaitForSeconds(1);
         AudioManager.Instance.playSound(AudioManager.Instance.Win);
@@ -38,7 +40,8 @@ public class WinManager : MonoBehaviour
         Contine_L[0].SetActive(0 == (index_x5 % 2));
         Contine_L[1].SetActive(0 != (index_x5 % 2));
         index_x5++;
-
+        yield return new WaitForSeconds(1);
+        nothanks.SetActive(true);
     }
     public void Contine()
     {
