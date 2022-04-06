@@ -62,7 +62,7 @@ public class PlayerController : CharacterBase
         ActionBase.setForceAc = setForce;
         for (int i = 0; i < CopyAnim.Count; i++)
         {
-            CopyAnim[i].checkSkelet(Die, null);
+            CopyAnim[i].checkSkelet(Die, null,true);
         }
         setMaterial();
         Invoke("chooseWeapon", 1);
@@ -74,10 +74,8 @@ public class PlayerController : CharacterBase
         float hpUpgrape = 0;
         if (levelHp >= 0)
         {
-
             hpUpgrape = CanvasManager.Instance.dataUpgrape.infoLevels[levelHp].HPbase;
         }
-
         HP = infoLvl.HPbase + hpUpgrape;
         HPBase = HP;
     }
@@ -133,6 +131,7 @@ public class PlayerController : CharacterBase
                     setanim = true;
                     checkAnimfly(setanim);
                 }
+
                 balence.transform.position = Hip.transform.position + (new Vector3(joy.Direction.x, joy.Direction.y, 0));
             }
             else
@@ -226,6 +225,7 @@ public class PlayerController : CharacterBase
                     L_Skin[indexMae].material = mar;
                     animDie();
                     Hip.gameObject.layer = 11;
+                    Hip.gameObject.tag = "Die";
                     gameObject.tag = keysave.tagDie;
                     if (Weapon.GetComponent<WeaponSpider>() != null)
                     {

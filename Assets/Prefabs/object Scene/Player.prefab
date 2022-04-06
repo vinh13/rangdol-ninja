@@ -86,9 +86,10 @@ GameObject:
   - component: {fileID: 5199852158632444193}
   - component: {fileID: 8947570302086099599}
   - component: {fileID: 3269330385522552529}
+  - component: {fileID: 8202097773379976304}
   m_Layer: 8
   m_Name: RightFoot
-  m_TagString: Untagged
+  m_TagString: SpendPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,6 +256,19 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   rig: {fileID: 0}
   WEAPON: {fileID: 0}
+--- !u!114 &8202097773379976304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253712769699662973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e742d84025d5a6a428de08f53cfaa210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damp: 1
 --- !u!1 &687048732167463319
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,9 +282,10 @@ GameObject:
   - component: {fileID: 4949628171486561634}
   - component: {fileID: 3817008890295941669}
   - component: {fileID: 5737704709050870779}
+  - component: {fileID: 893007769149493701}
   m_Layer: 8
   m_Name: LeftFoot
-  m_TagString: Untagged
+  m_TagString: SpendPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,6 +452,19 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   rig: {fileID: 0}
   WEAPON: {fileID: 0}
+--- !u!114 &893007769149493701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687048732167463319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e742d84025d5a6a428de08f53cfaa210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damp: 1
 --- !u!1 &1238723020197157210
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +976,7 @@ GameObject:
   - component: {fileID: 2375993206615628330}
   m_Layer: 8
   m_Name: RightThign
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1158,7 +1186,7 @@ GameObject:
   - component: {fileID: 7576853447703861276}
   m_Layer: 8
   m_Name: Spine1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1291,9 +1319,10 @@ GameObject:
   - component: {fileID: 4080498594155946309}
   - component: {fileID: 5046110156467997416}
   - component: {fileID: 4183237527025406831}
+  - component: {fileID: 339922638791868236}
   m_Layer: 8
   m_Name: RightArm
-  m_TagString: Untagged
+  m_TagString: SpendPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1459,6 +1488,19 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   rig: {fileID: 0}
   WEAPON: {fileID: 0}
+--- !u!114 &339922638791868236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969508468633156768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e742d84025d5a6a428de08f53cfaa210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damp: 1
 --- !u!1 &5080344800646904329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1893,7 @@ GameObject:
   - component: {fileID: 8065238025238484166}
   m_Layer: 8
   m_Name: Spine2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2160,7 +2202,7 @@ GameObject:
   - component: {fileID: 2200131324171764335}
   m_Layer: 8
   m_Name: LeftThign
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2436,9 +2478,10 @@ GameObject:
   - component: {fileID: 5225594105684790339}
   - component: {fileID: 8032147414375824124}
   - component: {fileID: 2358890664728148641}
+  - component: {fileID: 5464973007592867000}
   m_Layer: 8
   m_Name: LeftArm
-  m_TagString: Untagged
+  m_TagString: SpendPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2604,6 +2647,19 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   rig: {fileID: 0}
   WEAPON: {fileID: 0}
+--- !u!114 &5464973007592867000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491817319162369834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e742d84025d5a6a428de08f53cfaa210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damp: 1
 --- !u!1 &7568050552520430036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2716,7 +2772,7 @@ GameObject:
   - component: {fileID: 8467854119237639581}
   m_Layer: 8
   m_Name: RightForeArm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2897,7 +2953,7 @@ GameObject:
   - component: {fileID: 7546801766872582515}
   m_Layer: 8
   m_Name: LeftForeArm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3078,7 +3134,7 @@ GameObject:
   - component: {fileID: 7150746031381965567}
   m_Layer: 8
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3257,7 +3313,7 @@ GameObject:
   - component: {fileID: 2717232344528602703}
   m_Layer: 17
   m_Name: fxWall
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

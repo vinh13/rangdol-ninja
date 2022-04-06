@@ -13,6 +13,8 @@ TagManager:
   - Barrel
   - Wall
   - Saw
+  - SpendEnemy
+  - SpendPlayer
   layers:
   - Default
   - TransparentFX
@@ -32,7 +34,7 @@ TagManager:
   - Balence
   - Play
   - FxWall
-  - 
+  - Radius
   - 
   - 
   - 

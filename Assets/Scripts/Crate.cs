@@ -16,7 +16,7 @@ public class Crate : MonoBehaviour
         if (alive)
         {
            
-            if (collision.gameObject.tag == keysave.tagWeapon)
+            if (collision.gameObject.tag == keysave.tagWeapon|| collision.gameObject.tag == keysave.tagPlayer)
             {
                 AudioManager.Instance.playSound(AudioManager.Instance.thunggo);
                 alive = false;

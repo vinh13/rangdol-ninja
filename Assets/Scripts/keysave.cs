@@ -7,7 +7,7 @@ public class keysave
     public static string tagDie = "Die";
     public static string indexMaterial = "indexMaterial";
     public static string indexWeapon = "indexWeapon";
-    public static int TotalLevel = 23;
+    public static int TotalLevel = 24;
     public static int GetCoinAds = 300;
     public static int claimVal = 5;
     public static float timeCountDownLose = 10;
@@ -29,6 +29,9 @@ public class keysave
     public static string tagBarrel = "Barrel";
     public static string wall = "Wall";
     public static string tagSaw = "Saw";
+    public static string tagPlayer = "Player";
+    public static string tagSpendPlayer = "SpendPlayer";
+    public static string tagSpendEnemy = "SpendEnemy";
    
    
 }

@@ -31,13 +31,14 @@ public class ExplosiveBarrel : MonoBehaviour
     {
         if (alive)
         {
-            if (collision.gameObject.tag == keysave.tagWeapon)
+            if (collision.gameObject.tag == keysave.tagWeapon || collision.gameObject.tag == keysave.tagPlayer)
             {
                 alive = false;
                 Ex.SetActive(true);
                 Pari.SetActive(true);
                 Model.SetActive(false);
                 StartCoroutine("timeDie");
+              
             }
         }
     }

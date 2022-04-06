@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1194202042088939291}
   m_Layer: 9
   m_Name: RightHand
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4349147887604105803}
   m_Layer: 9
   m_Name: RightHand_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 3417013526504558459}
   m_Layer: 9
   m_Name: Head_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 7864833533987893507}
   m_Layer: 9
   m_Name: LeftThign
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.09401242, y: -0.036607284, z: -0.0021993052}
+  m_ConnectedAnchor: {x: -0.0940124, y: -0.036607284, z: -0.0021993052}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -285,9 +285,10 @@ GameObject:
   - component: {fileID: 4262909397022146351}
   - component: {fileID: 2078978721253624208}
   - component: {fileID: 5985733787055638989}
+  - component: {fileID: 7437020438738786780}
   m_Layer: 9
   m_Name: LeftArm
-  m_TagString: Untagged
+  m_TagString: SpendEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,7 +349,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000034272668, y: 0.27937478, z: -0.000000042184343}
+  m_ConnectedAnchor: {x: -0.00000034272668, y: 0.27937472, z: -0.000000042184332}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -453,6 +454,19 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   rig: {fileID: 0}
   WEAPON: {fileID: 0}
+--- !u!114 &7437020438738786780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465261478487565382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e742d84025d5a6a428de08f53cfaa210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damp: 1
 --- !u!1 &1743137220840966795
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +482,7 @@ GameObject:
   - component: {fileID: 445350387313454833}
   m_Layer: 9
   m_Name: RightForeArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,7 +543,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.27372754, y: 0.2467144, z: -0.05332436}
+  m_ConnectedAnchor: {x: 0.27372763, y: 0.2467144, z: -0.05332436}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -649,7 +663,7 @@ GameObject:
   - component: {fileID: 1951835025550965279}
   m_Layer: 9
   m_Name: LeftForeArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -710,7 +724,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.27359408, y: 0.2467144, z: -0.05332436}
+  m_ConnectedAnchor: {x: -0.273594, y: 0.2467144, z: -0.05332436}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -830,7 +844,7 @@ GameObject:
   - component: {fileID: 1193843148520167827}
   m_Layer: 9
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -890,7 +904,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000035713454, y: 0.32989937, z: 0}
+  m_ConnectedAnchor: {x: 0.000000009616899, y: 0.32989937, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1007,7 +1021,7 @@ GameObject:
   - component: {fileID: 4119067485557454813}
   m_Layer: 9
   m_Name: foot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,7 +1066,7 @@ GameObject:
   - component: {fileID: 1788530445077412960}
   m_Layer: 9
   m_Name: foot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,7 +1110,7 @@ GameObject:
   - component: {fileID: 4725884562808543430}
   m_Layer: 9
   m_Name: LeftHand
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1129,9 +1143,10 @@ GameObject:
   - component: {fileID: 5408040848837251625}
   - component: {fileID: 3867059180504250756}
   - component: {fileID: 5305301900943728643}
+  - component: {fileID: 8717453840437278076}
   m_Layer: 9
   m_Name: RightArm
-  m_TagString: Untagged
+  m_TagString: SpendEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1192,7 +1207,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000034272668, y: 0.27937487, z: 0.000000043836355}
+  m_ConnectedAnchor: {x: 0.00000034272668, y: 0.27937493, z: 0.000000043836366}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1297,6 +1312,19 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   rig: {fileID: 0}
   WEAPON: {fileID: 0}
+--- !u!114 &8717453840437278076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3988731569823469516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e742d84025d5a6a428de08f53cfaa210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damp: 1
 --- !u!1 &4153646270546032102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,7 +1336,7 @@ GameObject:
   - component: {fileID: 2378807180937173886}
   m_Layer: 9
   m_Name: LeftToe
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1343,7 +1371,7 @@ GameObject:
   - component: {fileID: 2035790742937036714}
   m_Layer: 9
   m_Name: Spine2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1405,7 +1433,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000035713454, y: 0.2450032, z: 0}
+  m_ConnectedAnchor: {x: 0.000000009616899, y: 0.2450032, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1521,7 +1549,7 @@ GameObject:
   - component: {fileID: 1197123621236248968}
   m_Layer: 9
   m_Name: LeftToe_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1584,7 +1612,7 @@ GameObject:
   - component: {fileID: 1912776075164740464}
   m_Layer: 9
   m_Name: Spine1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2047,7 +2075,7 @@ GameObject:
   - component: {fileID: 4353607720092199484}
   m_Layer: 9
   m_Name: RightToe_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2082,7 +2110,7 @@ GameObject:
   - component: {fileID: 6004660178283833670}
   m_Layer: 9
   m_Name: RightThign
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2143,7 +2171,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.098590046, y: -0.036607284, z: -0.0021993052}
+  m_ConnectedAnchor: {x: 0.09859007, y: -0.036607284, z: -0.0021993052}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2259,7 +2287,7 @@ GameObject:
   - component: {fileID: 4684446785353733750}
   m_Layer: 9
   m_Name: RightToe
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2292,9 +2320,10 @@ GameObject:
   - component: {fileID: 4288687269332628045}
   - component: {fileID: 1117394553917620707}
   - component: {fileID: 6841831003702173117}
+  - component: {fileID: 4793105519465162640}
   m_Layer: 9
   m_Name: RightFoot
-  m_TagString: Untagged
+  m_TagString: SpendEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2356,7 +2385,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000027758986, y: 0.40479556, z: -0.00000006939032}
+  m_ConnectedAnchor: {x: 0.0000002999416, y: 0.40479556, z: -0.00000006939032}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2461,6 +2490,19 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   rig: {fileID: 0}
   WEAPON: {fileID: 0}
+--- !u!114 &4793105519465162640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8081905033370124049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e742d84025d5a6a428de08f53cfaa210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damp: 1
 --- !u!1 &8293781595118023310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,9 +2603,10 @@ GameObject:
   - component: {fileID: 3971457150716442126}
   - component: {fileID: 5140105780791511369}
   - component: {fileID: 4327259596688873623}
+  - component: {fileID: 4318323528555965390}
   m_Layer: 9
   m_Name: LeftFoot
-  m_TagString: Untagged
+  m_TagString: SpendEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2625,7 +2668,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000007642418, y: 0.40479556, z: -0.000000069390346}
+  m_ConnectedAnchor: {x: 0.00000009132534, y: 0.40479556, z: -0.000000069390346}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2730,6 +2773,19 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   rig: {fileID: 0}
   WEAPON: {fileID: 0}
+--- !u!114 &4318323528555965390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801454838687929083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e742d84025d5a6a428de08f53cfaa210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damp: 1
 --- !u!1 &8902812216089894139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,7 +2890,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -614407869308800795, guid: 742e5e717ce36bb47b05e491f0ad53ac, type: 3}
+  m_Mesh: {fileID: 2181169292001478477, guid: 1c61bfa0a262cab4084910537cdb5300, type: 3}
   m_Bones:
   - {fileID: 489297064618856856}
   - {fileID: 7467100971521365147}

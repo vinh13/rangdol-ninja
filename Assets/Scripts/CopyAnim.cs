@@ -37,6 +37,7 @@ public class CopyAnim : MonoBehaviour
     [HideInInspector]
     public Rigidbody rig;
     public GameObject WEAPON;
+    bool setPlayer;
     private void Awake()
     {
         rig = this.GetComponent<Rigidbody>();
@@ -68,8 +69,9 @@ public class CopyAnim : MonoBehaviour
             }
         }
     }
-    public void checkSkelet(Action<float,typeAttack> val_0,Action val_1)
+    public void checkSkelet(Action<float,typeAttack> val_0,Action val_1,bool val_2)
     {
+        setPlayer = val_2;
         a = val_0;
         b = val_1;
     }
@@ -78,13 +80,22 @@ public class CopyAnim : MonoBehaviour
         alive = false;
         gameObject.tag = keysave.tagDie;
         gameObject.layer = 11;
+        gameObject.tag = "Die";
         JointDrive drive = new JointDrive();
         drive.mode = JointDriveMode.Position;
         drive.positionSpring = 0;
         drive.positionDamper = 10;
         drive.maximumForce = 3.4f * Mathf.Pow(10, 38);
-        join.angularXDrive = drive;
-        join.angularYZDrive = drive;
+        if (GetComponent<ConfigurableJoint>() != null)
+        {
+            join.angularXDrive = drive;
+            join.angularYZDrive = drive;
+        }
+        breakSkelet();
+        if (Weapon != null)
+        {
+            Weapon.layer = 11;
+        }
         if ((int)type == 0)
         {
             rig.AddForce(Vector3.up * 100);
@@ -127,25 +138,36 @@ public class CopyAnim : MonoBehaviour
                 b.Invoke();
             }
             ActionBase.getChildAction(this.gameObject);
-            join.connectedBody = null;
-            join.xMotion = ConfigurableJointMotion.Free;
-            join.yMotion = ConfigurableJointMotion.Free;
-            join.zMotion = ConfigurableJointMotion.Free;
-            join.angularXMotion = ConfigurableJointMotion.Free;
-            join.angularYMotion = ConfigurableJointMotion.Free;
-            join.angularZMotion = ConfigurableJointMotion.Free;
+            if (GetComponent<ConfigurableJoint>() != null)
+            {
+                join.connectedBody = null;
+                join.xMotion = ConfigurableJointMotion.Free;
+                join.yMotion = ConfigurableJointMotion.Free;
+                join.zMotion = ConfigurableJointMotion.Free;
+                join.angularXMotion = ConfigurableJointMotion.Free;
+                join.angularYMotion = ConfigurableJointMotion.Free;
+                join.angularZMotion = ConfigurableJointMotion.Free;
+            }
+                 
             gameObject.layer = 11;
+            gameObject.tag = "Die";
             gameObject.GetComponent<Rigidbody>().AddForce(transform.right * 500);
-
-            if (skelet != null)
-            {
-                skelet.breakSkelet();
-            }
-            if (Weapon != null)
-            {
-                Weapon.layer = 11;
-            }
           
+
+            //if (skelet != null)
+            //{
+            //    skelet.breakSkelet();
+            //}
+            //if (Weapon != null)
+            //{
+            //    Weapon.layer = 11;
+            //}
+            if (GetComponent<ConfigurableJoint>()!=null)
+            {
+                Destroy(GetComponent<ConfigurableJoint>());
+            }
+           
+
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -159,12 +181,38 @@ public class CopyAnim : MonoBehaviour
                 {
                     collision.gameObject.SetActive(false);
                 }
-                breakSkelet();
-                if (Weapon != null)
-                {
-                    Weapon.layer = 11;
-                }
+             //   breakSkelet();
+                //if (Weapon != null)
+                //{
+                //    Weapon.layer = 11;
+                //}
 
+            }
+            else if (collision.gameObject.tag == keysave.tagSpendEnemy && setPlayer)
+            {
+                a.Invoke(collision.gameObject.GetComponent<WeaponBase>().Damp, TypeAttack);
+                if (collision.gameObject.GetComponent<bullet>() != null)
+                {
+                    collision.gameObject.SetActive(false);
+                }
+               // breakSkelet();
+                //if (Weapon != null)
+                //{
+                //    Weapon.layer = 11;
+                //}
+            }
+            else if (collision.gameObject.tag == keysave.tagSpendPlayer && !setPlayer)
+            {
+                a.Invoke(collision.gameObject.GetComponent<WeaponBase>().Damp, TypeAttack);
+                if (collision.gameObject.GetComponent<bullet>() != null)
+                {
+                    collision.gameObject.SetActive(false);
+                }
+             //   breakSkelet();
+                //if (Weapon != null)
+                //{
+                //    Weapon.layer = 11;
+                //}
             }
             else if (collision.gameObject.tag == keysave.tagSaw)
             {
@@ -174,11 +222,11 @@ public class CopyAnim : MonoBehaviour
                 {
                     collision.gameObject.SetActive(false);
                 }
-                breakSkelet();
-                if (Weapon != null)
-                {
-                    Weapon.layer = 11;
-                }
+              //  breakSkelet();
+                //if (Weapon != null)
+                //{
+                //    Weapon.layer = 11;
+                //}
                 AudioManager.Instance.playSound(AudioManager.Instance.sawActive);
             }
         }
@@ -195,11 +243,11 @@ public class CopyAnim : MonoBehaviour
                 {
                     other.gameObject.SetActive(false);
                 }
-                breakSkelet();
-                if (Weapon != null)
-                {
-                    Weapon.layer = 11;
-                }
+                //breakSkelet();
+                //if (Weapon != null)
+                //{
+                //    Weapon.layer = 11;
+                //}
 
             }
         }

@@ -42,7 +42,7 @@ public class Enemy : CharacterBase
         ActionBase.getCountInGamePlay();
         for (int i = 0; i < CopyAnim.Count; i++)
         {
-            CopyAnim[i].checkSkelet(Die, StopGun);
+            CopyAnim[i].checkSkelet(Die, StopGun,false);
         }
         //       Sword
         for (int i = 0; i < L_Weapon.Count; i++)
@@ -82,7 +82,6 @@ public class Enemy : CharacterBase
         {
             laserLine.gameObject.SetActive(false);
         }
-
         StopCoroutine("timedelayGun");
     }
     private void shotGun()
@@ -102,7 +101,6 @@ public class Enemy : CharacterBase
         }
 
     }
-  
     public void Die(float damp, typeAttack valType)
     {
         if (alive && setT_HP)

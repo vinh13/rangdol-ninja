@@ -26,8 +26,8 @@ public class WeaponManager : MonoBehaviour
             AudioManager.Instance.playSound(sound);
             StopCoroutine("timeBlood");
             StartCoroutine("timeBlood");
-          //  StopCoroutine("timeScale");
-         //   StartCoroutine("timeScale");
+            StopCoroutine("timeScale");
+            StartCoroutine("timeScale");
         }
     }
     IEnumerator timeScale()
