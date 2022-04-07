@@ -33,7 +33,7 @@ public class GetWeaponHand : MonoBehaviour
     int indexWeapon;
     [SerializeField] List<GameObject> L_Hand;
     public static Action A;
-   
+    [SerializeField] bool setBoss;
    
     private void Start()
     {
@@ -46,6 +46,10 @@ public class GetWeaponHand : MonoBehaviour
         GameObject tempwea = Resources.Load(NameSkin) as GameObject;
         if ((int)typeHand!=2){
             GameObject wea = Instantiate(tempwea);
+            if (setBoss)
+            {
+                wea.transform.localScale = Vector3.one * 2;
+            }
             wea.transform.parent = L_Hand[(int)typeHand].transform;
             wea.transform.localEulerAngles = Vector3.zero;
             wea.transform.localPosition = Vector3.zero;
@@ -55,11 +59,19 @@ public class GetWeaponHand : MonoBehaviour
         else
         {
             GameObject wea = Instantiate(tempwea);
+            if (setBoss)
+            {
+                wea.transform.localScale = Vector3.one * 2;
+            }
             wea.transform.parent = L_Hand[0].transform;
             wea.transform.localEulerAngles = Vector3.zero;
             wea.transform.localPosition = Vector3.zero;
             wea.GetComponent<connectBody>().Join.connectedBody = L_Hand[0].GetComponent<Rigidbody>();
             GameObject wea1 = Instantiate(tempwea);
+            if (setBoss)
+            {
+                wea1.transform.localScale = Vector3.one * 2;
+            }
             wea1.transform.parent = L_Hand[1].transform;
             wea1.transform.localEulerAngles = Vector3.zero;
             wea1.transform.localPosition = Vector3.zero;

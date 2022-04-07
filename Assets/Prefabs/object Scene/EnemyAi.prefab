@@ -1053,7 +1053,7 @@ MonoBehaviour:
   setT_HP: 0
   rate: 1
   skinMesh: {fileID: 3541612435582904210}
-  RigWEAPON: {fileID: 8865602077912849783}
+  RigWEAPON: {fileID: 7586326741068528464}
   Speed: 32
 --- !u!54 &1398165506
 Rigidbody:
@@ -3004,7 +3004,7 @@ PrefabInstance:
     - target: {fileID: 7687694086506975542, guid: 4df035947af5ce345b460305d1738ca9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7739940004081883339, guid: 4df035947af5ce345b460305d1738ca9,
         type: 3}
@@ -3028,6 +3028,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df035947af5ce345b460305d1738ca9, type: 3}
+--- !u!54 &7586326741068528464 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 7739940004400650252, guid: 4df035947af5ce345b460305d1738ca9,
+    type: 3}
+  m_PrefabInstance: {fileID: 153616716697264988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &385926008972390764 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 538976468515902000, guid: 4df035947af5ce345b460305d1738ca9,

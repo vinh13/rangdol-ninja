@@ -31,7 +31,7 @@ public class ExplosiveBarrel : MonoBehaviour
     {
         if (alive)
         {
-            if (collision.gameObject.tag == keysave.tagWeapon || collision.gameObject.tag == keysave.tagPlayer)
+            if (collision.gameObject.tag == keysave.tagWeapon || collision.gameObject.tag == keysave.tagPlayer || collision.gameObject.tag == keysave.tagSpendPlayer || collision.gameObject.tag == keysave.enemy ||collision.gameObject.tag == keysave.tagCut )
             {
                 alive = false;
                 Ex.SetActive(true);

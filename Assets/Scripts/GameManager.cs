@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public List<GameObject> L_Enemy;
     public List<RectTransform> L_Rada;
     [SerializeField]  RectTransform CanvasRect;
+    [SerializeField]
+    Camera CAM;
     private void Awake()
     {
         if (!Instance)
@@ -78,8 +80,8 @@ public class GameManager : MonoBehaviour
     }
     void rada( Transform val,int a)
     {
-        Vector3 screenPoint = Camera.main.WorldToViewportPoint(val.transform.position);
-        bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
+        Vector3 screenPoint = CAM.WorldToViewportPoint(val.transform.position);
+       bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
         if (!onScreen)
         {
             L_Rada[a].gameObject.SetActive(true);
@@ -87,31 +89,67 @@ public class GameManager : MonoBehaviour
             ((screenPoint.x * CanvasRect.sizeDelta.x) - (CanvasRect.sizeDelta.x * 0.45f)),
             ((screenPoint.y * CanvasRect.sizeDelta.y) - (CanvasRect.sizeDelta.y * 0.45f)));
             Vector2 tempWorldObject_ScreenPosition = WorldObject_ScreenPosition;
-            if (tempWorldObject_ScreenPosition.x >= (CanvasRect.sizeDelta.x *0.45f))
-            {
-                tempWorldObject_ScreenPosition.x = CanvasRect.sizeDelta.x *0.45f;
-            }
-            else if (tempWorldObject_ScreenPosition.x <= -(CanvasRect.sizeDelta.x *0.45f))
-            {
-                tempWorldObject_ScreenPosition.x = -CanvasRect.sizeDelta.x *0.45f;
-            }
+
             if (tempWorldObject_ScreenPosition.y >= (CanvasRect.sizeDelta.y * 0.3f))
             {
+
                 tempWorldObject_ScreenPosition.y = CanvasRect.sizeDelta.y * 0.3f;
             }
             else if (tempWorldObject_ScreenPosition.y <= -(CanvasRect.sizeDelta.y * 0.45f))
             {
-                tempWorldObject_ScreenPosition.y = -CanvasRect.sizeDelta.y * 0.45f;
+
+                tempWorldObject_ScreenPosition.y = -(CanvasRect.sizeDelta.y * 0.45f);
             }
+
+            if (tempWorldObject_ScreenPosition.x >= (CanvasRect.sizeDelta.x * 0.45f) )
+            {
+                if (val.transform.position.x > CAM.transform.position.x)
+                {
+                    tempWorldObject_ScreenPosition.x = CanvasRect.sizeDelta.x * 0.45f;
+                    Vector2 tempAr = (tempWorldObject_ScreenPosition - WorldObject_ScreenPosition).normalized;
+
+                    L_Rada[a].up = tempAr;
+                }
+                else
+                {
+                    tempWorldObject_ScreenPosition.x = -(CanvasRect.sizeDelta.x * 0.45f);
+                    Vector2 tempAr = (tempWorldObject_ScreenPosition - WorldObject_ScreenPosition).normalized;
+
+                    L_Rada[a].up = -tempAr;
+                }
+               
+            }
+            else if (tempWorldObject_ScreenPosition.x <= -(CanvasRect.sizeDelta.x * 0.45f))
+            {
+
+                if (val.transform.position.x < CAM.transform.position.x)
+                {
+                    tempWorldObject_ScreenPosition.x = -(CanvasRect.sizeDelta.x * 0.45f);
+                    Vector2 tempAr = (tempWorldObject_ScreenPosition - WorldObject_ScreenPosition).normalized;
+
+                    L_Rada[a].up = tempAr;
+
+                }
+                else
+                {
+                    tempWorldObject_ScreenPosition.x = CanvasRect.sizeDelta.x * 0.45f;
+                    Vector2 tempAr = (tempWorldObject_ScreenPosition - WorldObject_ScreenPosition).normalized;
+
+                    L_Rada[a].up = -tempAr;
+                }
+            } 
+
+
             L_Rada[a].anchoredPosition = tempWorldObject_ScreenPosition;
-            Vector2 tempAr = (tempWorldObject_ScreenPosition - WorldObject_ScreenPosition).normalized;
-            L_Rada[a].up = tempAr;
+           
         }
         else
         {
            
             L_Rada[a].gameObject.SetActive(false);
         }
+      
+
     }
     public int getcoininWin(int level)
     {

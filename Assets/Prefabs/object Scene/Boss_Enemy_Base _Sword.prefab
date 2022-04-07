@@ -587,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3230312569047825071}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000001043081}
-  m_LocalPosition: {x: 0, y: 129.6, z: 0}
+  m_LocalPosition: {x: 0, y: 180, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1732511770623620666}
@@ -619,7 +619,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 6107673007897279285}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.344476, z: 0.017119216}
+  m_ConnectedAnchor: {x: 0, y: 2.0484765, z: 0.017119216}
   serializedVersion: 2
   m_Spring: 300
   m_Damper: 10
@@ -1148,6 +1148,7 @@ MonoBehaviour:
   L_Hand:
   - {fileID: 6493341857687974915}
   - {fileID: 8724468308718182281}
+  setBoss: 1
 --- !u!1 &4495131497087217492
 GameObject:
   m_ObjectHideFlags: 0

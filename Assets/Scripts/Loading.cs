@@ -33,7 +33,7 @@ public class Loading : MonoBehaviour
 			
 		}
 		Application.targetFrameRate = 60;
-		PlayerPrefs.SetInt(keysave.Coin, 50000);
+		//PlayerPrefs.SetInt(keysave.Coin, 50000);
 		if (setDebug)
         {
 			PlayerPrefs.SetInt(keysave.Level, levelIndex);
